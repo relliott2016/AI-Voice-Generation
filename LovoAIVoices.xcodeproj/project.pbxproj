@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F809599B2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */; };
+		F809599D2B74F95D00F8FDF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599C2B74F95D00F8FDF7 /* ContentView.swift */; };
+		F809599F2B74F95E00F8FDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F809599E2B74F95E00F8FDF7 /* Assets.xcassets */; };
+		F80959A22B74F95E00F8FDF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */; };
+		F80959AC2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959AB2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift */; };
+		F80959B62B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959B52B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift */; };
+		F80959B82B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959B72B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift */; };
+		F80959C92B74FA1900F8FDF7 /* VoicesPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C62B74FA1900F8FDF7 /* VoicesPageViewModel.swift */; };
+		F80959CA2B74FA1900F8FDF7 /* VoicesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C72B74FA1900F8FDF7 /* VoicesDataSource.swift */; };
+		F80959CD2B74FA4A00F8FDF7 /* Voices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959CC2B74FA4A00F8FDF7 /* Voices.swift */; };
+		F80959D02B74FC3100F8FDF7 /* VoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959CF2B74FC3100F8FDF7 /* VoiceCell.swift */; };
+		F80959D42B7504BD00F8FDF7 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D32B7504BD00F8FDF7 /* Voice.swift */; };
+		F80959D62B750A4700F8FDF7 /* VoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D52B750A4700F8FDF7 /* VoiceViewModel.swift */; };
+		F80959D92B7519F600F8FDF7 /* VoiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D82B7519F600F8FDF7 /* VoiceListView.swift */; };
+		F80959DD2B75257F00F8FDF7 /* AudioStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */; };
+		F80959E02B7545F800F8FDF7 /* Array + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */; };
+		F80959E22B757E1100F8FDF7 /* String + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E12B757E1100F8FDF7 /* String + extensions.swift */; };
+		F80959E42B762FA700F8FDF7 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E32B762FA700F8FDF7 /* VoiceView.swift */; };
+		F80959E62B76301B00F8FDF7 /* StretchyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E52B76301B00F8FDF7 /* StretchyHeaderView.swift */; };
+		F80959E92B763B8100F8FDF7 /* VoiceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E82B763B8100F8FDF7 /* VoiceInfoView.swift */; };
+		F80959ED2B7659FF00F8FDF7 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959EC2B7659FF00F8FDF7 /* AudioVisualizer.swift */; };
+		F821FCC62C04E00B00C2360D /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC52C04E00B00C2360D /* GlobalConstants.swift */; };
+		F821FCC82C0664BA00C2360D /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F821FCC72C0664BA00C2360D /* Config.plist */; };
+		F821FCCA2C0669ED00C2360D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC92C0669ED00C2360D /* Config.swift */; };
+		F8DD65FE2B7A457600BAEBDB /* Locale + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DD65FD2B7A457600BAEBDB /* Locale + extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F80959A82B74F95E00F8FDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F809598F2B74F95D00F8FDF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F80959962B74F95D00F8FDF7;
+			remoteInfo = LovoAIVoices;
+		};
+		F80959B22B74F95E00F8FDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F809598F2B74F95D00F8FDF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F80959962B74F95D00F8FDF7;
+			remoteInfo = LovoAIVoices;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F80959972B74F95D00F8FDF7 /* LovoAIVoices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovoAIVoices.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesApp.swift; sourceTree = "<group>"; };
+		F809599C2B74F95D00F8FDF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F809599E2B74F95E00F8FDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F80959A72B74F95E00F8FDF7 /* LovoAIVoicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovoAIVoicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80959AB2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesTests.swift; sourceTree = "<group>"; };
+		F80959B12B74F95E00F8FDF7 /* LovoAIVoicesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovoAIVoicesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80959B52B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesUITests.swift; sourceTree = "<group>"; };
+		F80959B72B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F80959C62B74FA1900F8FDF7 /* VoicesPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesPageViewModel.swift; sourceTree = "<group>"; };
+		F80959C72B74FA1900F8FDF7 /* VoicesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesDataSource.swift; sourceTree = "<group>"; };
+		F80959CC2B74FA4A00F8FDF7 /* Voices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voices.swift; sourceTree = "<group>"; };
+		F80959CF2B74FC3100F8FDF7 /* VoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCell.swift; sourceTree = "<group>"; };
+		F80959D32B7504BD00F8FDF7 /* Voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
+		F80959D52B750A4700F8FDF7 /* VoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceViewModel.swift; sourceTree = "<group>"; };
+		F80959D82B7519F600F8FDF7 /* VoiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceListView.swift; sourceTree = "<group>"; };
+		F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamer.swift; sourceTree = "<group>"; };
+		F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extensions.swift"; sourceTree = "<group>"; };
+		F80959E12B757E1100F8FDF7 /* String + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extensions.swift"; sourceTree = "<group>"; };
+		F80959E32B762FA700F8FDF7 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
+		F80959E52B76301B00F8FDF7 /* StretchyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderView.swift; sourceTree = "<group>"; };
+		F80959E82B763B8100F8FDF7 /* VoiceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInfoView.swift; sourceTree = "<group>"; };
+		F80959EC2B7659FF00F8FDF7 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
+		F821FCC52C04E00B00C2360D /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		F821FCC72C0664BA00C2360D /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		F821FCC92C0669ED00C2360D /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F8DD65FD2B7A457600BAEBDB /* Locale + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale + extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F80959942B74F95D00F8FDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80959A42B74F95E00F8FDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80959AE2B74F95E00F8FDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F809598E2B74F95D00F8FDF7 = {
+			isa = PBXGroup;
+			children = (
+				F80959992B74F95D00F8FDF7 /* LovoAIVoices */,
+				F80959AA2B74F95E00F8FDF7 /* LovoAIVoicesTests */,
+				F80959B42B74F95E00F8FDF7 /* LovoAIVoicesUITests */,
+				F80959982B74F95D00F8FDF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F80959982B74F95D00F8FDF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F80959972B74F95D00F8FDF7 /* LovoAIVoices.app */,
+				F80959A72B74F95E00F8FDF7 /* LovoAIVoicesTests.xctest */,
+				F80959B12B74F95E00F8FDF7 /* LovoAIVoicesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F80959992B74F95D00F8FDF7 /* LovoAIVoices */ = {
+			isa = PBXGroup;
+			children = (
+				F821FCC42C04DF7900C2360D /* Main */,
+				F80959DE2B7545D000F8FDF7 /* Type Extensions */,
+				F80959DB2B75253100F8FDF7 /* Helpers */,
+				F80959D72B7519CF00F8FDF7 /* Screens */,
+				F80959CE2B74FB7100F8FDF7 /* Views */,
+				F80959C42B74F97800F8FDF7 /* DataSources */,
+				F80959C52B74F98D00F8FDF7 /* Models */,
+				F80959A02B74F95E00F8FDF7 /* Preview Content */,
+			);
+			path = LovoAIVoices;
+			sourceTree = "<group>";
+		};
+		F80959A02B74F95E00F8FDF7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F80959AA2B74F95E00F8FDF7 /* LovoAIVoicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F80959AB2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift */,
+			);
+			path = LovoAIVoicesTests;
+			sourceTree = "<group>";
+		};
+		F80959B42B74F95E00F8FDF7 /* LovoAIVoicesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F80959B52B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift */,
+				F80959B72B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift */,
+			);
+			path = LovoAIVoicesUITests;
+			sourceTree = "<group>";
+		};
+		F80959C42B74F97800F8FDF7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				F80959C72B74FA1900F8FDF7 /* VoicesDataSource.swift */,
+				F80959C62B74FA1900F8FDF7 /* VoicesPageViewModel.swift */,
+				F80959D52B750A4700F8FDF7 /* VoiceViewModel.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		F80959C52B74F98D00F8FDF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F80959CC2B74FA4A00F8FDF7 /* Voices.swift */,
+				F80959D32B7504BD00F8FDF7 /* Voice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F80959CE2B74FB7100F8FDF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F809599C2B74F95D00F8FDF7 /* ContentView.swift */,
+				F80959CF2B74FC3100F8FDF7 /* VoiceCell.swift */,
+				F80959E52B76301B00F8FDF7 /* StretchyHeaderView.swift */,
+				F80959E82B763B8100F8FDF7 /* VoiceInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F80959D72B7519CF00F8FDF7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F80959D82B7519F600F8FDF7 /* VoiceListView.swift */,
+				F80959E32B762FA700F8FDF7 /* VoiceView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F80959DB2B75253100F8FDF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */,
+				F80959EC2B7659FF00F8FDF7 /* AudioVisualizer.swift */,
+				F821FCC92C0669ED00C2360D /* Config.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F80959DE2B7545D000F8FDF7 /* Type Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */,
+				F80959E12B757E1100F8FDF7 /* String + extensions.swift */,
+				F8DD65FD2B7A457600BAEBDB /* Locale + extensions.swift */,
+			);
+			path = "Type Extensions";
+			sourceTree = "<group>";
+		};
+		F821FCC42C04DF7900C2360D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */,
+				F809599E2B74F95E00F8FDF7 /* Assets.xcassets */,
+				F821FCC52C04E00B00C2360D /* GlobalConstants.swift */,
+				F821FCC72C0664BA00C2360D /* Config.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F80959962B74F95D00F8FDF7 /* LovoAIVoices */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80959BB2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoices" */;
+			buildPhases = (
+				F80959932B74F95D00F8FDF7 /* Sources */,
+				F80959942B74F95D00F8FDF7 /* Frameworks */,
+				F80959952B74F95D00F8FDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LovoAIVoices;
+			productName = LovoAIVoices;
+			productReference = F80959972B74F95D00F8FDF7 /* LovoAIVoices.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F80959A62B74F95E00F8FDF7 /* LovoAIVoicesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80959BE2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoicesTests" */;
+			buildPhases = (
+				F80959A32B74F95E00F8FDF7 /* Sources */,
+				F80959A42B74F95E00F8FDF7 /* Frameworks */,
+				F80959A52B74F95E00F8FDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80959A92B74F95E00F8FDF7 /* PBXTargetDependency */,
+			);
+			name = LovoAIVoicesTests;
+			productName = LovoAIVoicesTests;
+			productReference = F80959A72B74F95E00F8FDF7 /* LovoAIVoicesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F80959B02B74F95E00F8FDF7 /* LovoAIVoicesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80959C12B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoicesUITests" */;
+			buildPhases = (
+				F80959AD2B74F95E00F8FDF7 /* Sources */,
+				F80959AE2B74F95E00F8FDF7 /* Frameworks */,
+				F80959AF2B74F95E00F8FDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80959B32B74F95E00F8FDF7 /* PBXTargetDependency */,
+			);
+			name = LovoAIVoicesUITests;
+			productName = LovoAIVoicesUITests;
+			productReference = F80959B12B74F95E00F8FDF7 /* LovoAIVoicesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F809598F2B74F95D00F8FDF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F80959962B74F95D00F8FDF7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F80959A62B74F95E00F8FDF7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F80959962B74F95D00F8FDF7;
+					};
+					F80959B02B74F95E00F8FDF7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F80959962B74F95D00F8FDF7;
+					};
+				};
+			};
+			buildConfigurationList = F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAIVoices" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F809598E2B74F95D00F8FDF7;
+			productRefGroup = F80959982B74F95D00F8FDF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F80959962B74F95D00F8FDF7 /* LovoAIVoices */,
+				F80959A62B74F95E00F8FDF7 /* LovoAIVoicesTests */,
+				F80959B02B74F95E00F8FDF7 /* LovoAIVoicesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F80959952B74F95D00F8FDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80959A22B74F95E00F8FDF7 /* Preview Assets.xcassets in Resources */,
+				F821FCC82C0664BA00C2360D /* Config.plist in Resources */,
+				F809599F2B74F95E00F8FDF7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80959A52B74F95E00F8FDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80959AF2B74F95E00F8FDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F80959932B74F95D00F8FDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80959ED2B7659FF00F8FDF7 /* AudioVisualizer.swift in Sources */,
+				F80959E42B762FA700F8FDF7 /* VoiceView.swift in Sources */,
+				F80959E62B76301B00F8FDF7 /* StretchyHeaderView.swift in Sources */,
+				F809599D2B74F95D00F8FDF7 /* ContentView.swift in Sources */,
+				F821FCCA2C0669ED00C2360D /* Config.swift in Sources */,
+				F80959E92B763B8100F8FDF7 /* VoiceInfoView.swift in Sources */,
+				F80959CA2B74FA1900F8FDF7 /* VoicesDataSource.swift in Sources */,
+				F80959CD2B74FA4A00F8FDF7 /* Voices.swift in Sources */,
+				F80959E02B7545F800F8FDF7 /* Array + extensions.swift in Sources */,
+				F80959D42B7504BD00F8FDF7 /* Voice.swift in Sources */,
+				F80959D02B74FC3100F8FDF7 /* VoiceCell.swift in Sources */,
+				F821FCC62C04E00B00C2360D /* GlobalConstants.swift in Sources */,
+				F80959D92B7519F600F8FDF7 /* VoiceListView.swift in Sources */,
+				F80959D62B750A4700F8FDF7 /* VoiceViewModel.swift in Sources */,
+				F80959DD2B75257F00F8FDF7 /* AudioStreamer.swift in Sources */,
+				F80959C92B74FA1900F8FDF7 /* VoicesPageViewModel.swift in Sources */,
+				F8DD65FE2B7A457600BAEBDB /* Locale + extensions.swift in Sources */,
+				F80959E22B757E1100F8FDF7 /* String + extensions.swift in Sources */,
+				F809599B2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80959A32B74F95E00F8FDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80959AC2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80959AD2B74F95E00F8FDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80959B62B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift in Sources */,
+				F80959B82B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F80959A92B74F95E00F8FDF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F80959962B74F95D00F8FDF7 /* LovoAIVoices */;
+			targetProxy = F80959A82B74F95E00F8FDF7 /* PBXContainerItemProxy */;
+		};
+		F80959B32B74F95E00F8FDF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F80959962B74F95D00F8FDF7 /* LovoAIVoices */;
+			targetProxy = F80959B22B74F95E00F8FDF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F80959B92B74F95E00F8FDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F80959BA2B74F95E00F8FDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F80959BC2B74F95E00F8FDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LovoAIVoices/Preview Content\"";
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F80959BD2B74F95E00F8FDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LovoAIVoices/Preview Content\"";
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoices;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F80959BF2B74F95E00F8FDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LovoAIVoices.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LovoAIVoices";
+			};
+			name = Debug;
+		};
+		F80959C02B74F95E00F8FDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoicesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LovoAIVoices.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LovoAIVoices";
+			};
+			name = Release;
+		};
+		F80959C22B74F95E00F8FDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoicesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LovoAIVoices;
+			};
+			name = Debug;
+		};
+		F80959C32B74F95E00F8FDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoicesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LovoAIVoices;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAIVoices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80959B92B74F95E00F8FDF7 /* Debug */,
+				F80959BA2B74F95E00F8FDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80959BB2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoices" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80959BC2B74F95E00F8FDF7 /* Debug */,
+				F80959BD2B74F95E00F8FDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80959BE2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoicesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80959BF2B74F95E00F8FDF7 /* Debug */,
+				F80959C02B74F95E00F8FDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80959C12B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoicesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80959C22B74F95E00F8FDF7 /* Debug */,
+				F80959C32B74F95E00F8FDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F809598F2B74F95D00F8FDF7 /* Project object */;
+}
