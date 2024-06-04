@@ -12,4 +12,7 @@ struct GlobalConstants {
     // external URLs
     static let lovoGennyURL = "https://api.genny.lovo.ai"
     static let speakersURL = "https://api.genny.lovo.ai/api/v1/speakers"
+
+    // APIKey Placeholder
+    static let apiKeyPlaceHolder = "ADD_LOVO_GENNY_API_KEY_HERE"
 }
