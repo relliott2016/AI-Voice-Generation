@@ -9,13 +9,14 @@ import Foundation
 
 class Config {
     static var apiKey: String {
-        guard let filePath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
-            fatalError("Couldn't find file 'Config.plist'.")
+        guard let apiKey = Bundle.main.infoDictionary?["LOVO_GENNY_API_KEY"] as? String else {
+            fatalError("LOVO_GENNY_API_KEY key entry is missing from the Xcode target info tab")
         }
-        let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "LOVO_GENNY_API_KEY") as? String else {
-            fatalError("Couldn't find key 'LOVO_GENNY_API_KEY' in 'Config.plist'.")
+
+        guard apiKey != GlobalConstants.apiKeyPlaceHolder else {
+            fatalError("You need to replace the LOVO_GENNY_API_KEY placeholder with your API key on the Xcode target info tab")
         }
-        return value
+
+        return apiKey
     }
 }
