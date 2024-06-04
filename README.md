@@ -13,13 +13,13 @@ A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/relliott2016/AI-Voice-Generation
+   git clone https://github.com/relliott2016/AI-Voice-Generation.
 
-2. Obtain a free API key from [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started)
+2. Obtain a free API key from [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
 
-3. Create and add a Config.plist to your Xcode project and add the API Key as a string type using the key "LOVO_GENNY_API_KEY"
-
-4. Modify the Xcode target LovoAIVoices Signing & Capabilities tab to include your own team and Bundle Identifier
+3. Substitute "LOVO_GENNY_API_KEY" placeholder value "ADD_LOVO_GENNY_API_KEY_HERE" with your API key in the Xcode LovoAIVoices target Info tab.
+   
+4. Modify the Xcode target LovoAIVoices Signing & Capabilities tab to include your own team and Bundle Identifier (if your running on your device)
 
 5. Build and run the app in the simulator or on your device.
 
