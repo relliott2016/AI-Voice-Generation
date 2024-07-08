@@ -34,9 +34,6 @@ struct VoiceInfoView: View {
         }
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 4) {
-                Text(voice.displayName)
-                    .font(.title2).bold()
-
                 HStack {
                     Text("Gender:")
                         .font(.title3)

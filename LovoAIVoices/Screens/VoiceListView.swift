@@ -15,7 +15,7 @@ struct VoiceListView: View {
       NavigationView {
         List(voicesPageViewModel.voices) { voice in
           NavigationLink(destination: {
-            VoiceView(voice: voice)
+            VoiceDetailView(voice: voice)
           }, label: {
             VoiceCell(voiceViewModel: .init(voice: voice))
             .onAppear {

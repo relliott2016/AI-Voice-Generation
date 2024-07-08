@@ -24,7 +24,7 @@
 		F80959DD2B75257F00F8FDF7 /* AudioStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */; };
 		F80959E02B7545F800F8FDF7 /* Array + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */; };
 		F80959E22B757E1100F8FDF7 /* String + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E12B757E1100F8FDF7 /* String + extensions.swift */; };
-		F80959E42B762FA700F8FDF7 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E32B762FA700F8FDF7 /* VoiceView.swift */; };
+		F80959E42B762FA700F8FDF7 /* VoiceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E32B762FA700F8FDF7 /* VoiceDetailView.swift */; };
 		F80959E62B76301B00F8FDF7 /* StretchyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E52B76301B00F8FDF7 /* StretchyHeaderView.swift */; };
 		F80959E92B763B8100F8FDF7 /* VoiceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E82B763B8100F8FDF7 /* VoiceInfoView.swift */; };
 		F80959ED2B7659FF00F8FDF7 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959EC2B7659FF00F8FDF7 /* AudioVisualizer.swift */; };
@@ -71,7 +71,7 @@
 		F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamer.swift; sourceTree = "<group>"; };
 		F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extensions.swift"; sourceTree = "<group>"; };
 		F80959E12B757E1100F8FDF7 /* String + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extensions.swift"; sourceTree = "<group>"; };
-		F80959E32B762FA700F8FDF7 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
+		F80959E32B762FA700F8FDF7 /* VoiceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceDetailView.swift; sourceTree = "<group>"; };
 		F80959E52B76301B00F8FDF7 /* StretchyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderView.swift; sourceTree = "<group>"; };
 		F80959E82B763B8100F8FDF7 /* VoiceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInfoView.swift; sourceTree = "<group>"; };
 		F80959EC2B7659FF00F8FDF7 /* AudioVisualizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				F80959D82B7519F600F8FDF7 /* VoiceListView.swift */,
-				F80959E32B762FA700F8FDF7 /* VoiceView.swift */,
+				F80959E32B762FA700F8FDF7 /* VoiceDetailView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F80959ED2B7659FF00F8FDF7 /* AudioVisualizer.swift in Sources */,
-				F80959E42B762FA700F8FDF7 /* VoiceView.swift in Sources */,
+				F80959E42B762FA700F8FDF7 /* VoiceDetailView.swift in Sources */,
 				F80959E62B76301B00F8FDF7 /* StretchyHeaderView.swift in Sources */,
 				F809599D2B74F95D00F8FDF7 /* ContentView.swift in Sources */,
 				F821FCCA2C0669ED00C2360D /* Config.swift in Sources */,
