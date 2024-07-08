@@ -23,6 +23,10 @@ A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny
 
 5. Build and run the app in the simulator or on your device.
 
+## License
+
+This project is licensed under the MIT License - see the [MIT License](LICENSE) file for details.
+
 ## Screenshots
 
 <img src="https://github.com/relliott2016/AI-Voice-Generation/blob/master/Screenshots/List.png" width=30% height=30%>          <img src="https://github.com/relliott2016/AI-Voice-Generation/blob/master/Screenshots/Detail%20-%20Listen.png" width=30% height=30%>          <img src="https://github.com/relliott2016/AI-Voice-Generation/blob/master/Screenshots/Detail%20-%20Stop.png" width=30% height=30%> 
