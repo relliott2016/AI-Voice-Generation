@@ -10,10 +10,11 @@ import SwiftUI
 @MainActor
 struct VoiceInfoView: View {
     @State private var showAudioVisualizer = false
+
     var audioVisualizer: AudioVisualizer
-    let voice: Voice
     var playVoiceImage: UIImage? = "▶️".textToImage()
     var playingVoiceImage: UIImage? = "⏸️".textToImage()
+    let voice: Voice
     private let locale: Locale = .current
     private let audioStreamer = AudioStreamer()
 
@@ -37,32 +38,36 @@ struct VoiceInfoView: View {
                 HStack {
                     Text("Gender:")
                         .font(.title3)
-                    Text(voice.gender.rawValue)
+                    Spacer()
+                    Text(voice.gender.rawValue.capitalized)
                         .font(.title3)
                 }
 
                 HStack {
                     Text("Type:")
                         .font(.title3)
-                    Text(voice.speakerType.rawValue)
+                    Spacer()
+                    Text(voice.speakerType.rawValue.capitalized)
                         .font(.title3)
                 }
                 
                 HStack {
                     Text("Country:")
                         .font(.title3)
-                    Text(Locale.current.region(cultureCode: voice.locale) ?? "")
+                    Spacer()
+                    Text(Locale.current.region(cultureCode: voice.locale.capitalized) ?? "")
                         .font(.title3)
                 }
 
                 HStack {
                     Text("Language:")
                         .font(.title3)
-                    Text(Locale.current.language(cultureCode: voice.locale) ?? "")
+                    Spacer()
+                    Text(Locale.current.language(cultureCode: voice.locale.capitalized) ?? "")
                         .font(.title3)
                 }
-                
-                HStack {
+
+                HStack() {
                     Group {
                         if showAudioVisualizer {
                             if let playingVoiceImage {
@@ -91,7 +96,9 @@ struct VoiceInfoView: View {
                     }
 
                 }
+                .offset(x: 75, y: 30)
             }
+            .padding(.horizontal, 75)
             .onDisappear(perform: {
                 stopVoicePlay()
             })

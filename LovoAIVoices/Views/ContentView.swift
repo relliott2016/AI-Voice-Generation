@@ -9,7 +9,6 @@ import SwiftUI
 
 @MainActor
 struct ContentView: View {
-    @State private var apiKey: String = Config.apiKey
     var body: some View {
         VoiceListView()
     }
