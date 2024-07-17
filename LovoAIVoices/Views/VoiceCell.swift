@@ -11,7 +11,6 @@ import SwiftUI
 @MainActor
 struct VoiceCell: View {
     @ObservedObject var voiceViewModel: VoiceViewModel
-
     private let locale: Locale = .current
 
     var voice: Voice {
@@ -19,54 +18,54 @@ struct VoiceCell: View {
     }
 
     var body: some View {
-        HStack(alignment: .top) {
+        ZStack(alignment: .bottom) {
             AsyncImage(url: voice.imageUrl, content: { image in
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 80, height: 120)
-                    .border(Color.white, width: 4)
-                    .cornerRadius(8)
+                    .scaledToFill()
+                    .frame(width: 250, height: 350)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.white, lineWidth: 2)
+                    )
+                    .shadow(radius: 10)
             }, placeholder: {
                 ProgressView()
             })
-            .frame(width: 80, height: 120)
 
-            VStack(alignment: .leading, spacing: 4) {
-                Text(voice.displayName)
-                    .font(.title2).bold()
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("\(voice.displayName)")
+                        .font(.headline)
+                        .bold()
+                        .foregroundColor(.white)
 
-                HStack {
-                    Text("Gender:")
-                        .font(.title3)
-                    Text(voice.gender.rawValue)
-                        .font(.title3)
+                    Text("\(Locale.current.language(cultureCode: voice.locale) ?? "".capitalized) \(voice.gender.rawValue.capitalized)")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
                 }
+                .padding()
 
-                HStack {
-                    Text("Type:")
-                        .font(.title3)
-                    Text(voice.speakerType.rawValue)
-                        .font(.title3)
-                }
+                Spacer()
 
-                HStack {
-                    Text("Country:")
-                        .font(.title3)
-                    Text(Locale.current.region(cultureCode: voice.locale) ?? "")
-                        .font(.title3)
+                ZStack {
+                    Circle()
+                        .fill(Color.clear)
+                        .frame(width: 30, height: 30)
+                    Image(systemName: "play.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.white)
                 }
-
-                HStack {
-                    Text("Language:")
-                        .font(.title3)
-                    Text(Locale.current.language(cultureCode: voice.locale) ?? "")
-                        .font(.title3)
-                }
+                .padding()
             }
-
-            Spacer()
+            .frame(width: 250)
+            .background(Color.primary.opacity(0.2))
+            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .cornerRadius(12)
         }
+        .frame(width: 250, height: 350)
     }
 }
 
