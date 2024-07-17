@@ -12,19 +12,28 @@ struct VoiceListView: View {
     @StateObject var voicesPageViewModel = VoicesPageViewModel(voicesDataSource: VoicesDataSource.init())
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(voicesPageViewModel.voices) { voice in
                 NavigationLink(
                     destination: VoiceDetailView(voice: voice),
                     label: {
-                        VoiceCell(voiceViewModel: .init(voice: voice))
-                            .onAppear {
-                                if voice == voicesPageViewModel.voices.last {
-                                    voicesPageViewModel.fetchNextpage()
+                        HStack(spacing: 50) {
+                            Spacer()
+                            VoiceCell(voiceViewModel: .init(voice: voice))
+                                .onAppear {
+                                    if voice == voicesPageViewModel.voices.last {
+                                        voicesPageViewModel.fetchNextpage()
+                                    }
                                 }
-                            }
+                            Spacer()
+                        }
                     }
                 )
+
+                .foregroundStyle(.clear)
+                .padding(.bottom)
+                .padding(.leading)
+                .listRowSeparator(.hidden)
             }
             .onAppear {
                 voicesPageViewModel.fetchVoices()
@@ -43,6 +52,7 @@ struct VoiceListView: View {
                 }
             }
         }
+        .alignmentGuide(VerticalAlignment.center) { _ in 0 }
     }
 }
 
