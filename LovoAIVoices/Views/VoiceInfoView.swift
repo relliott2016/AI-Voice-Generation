@@ -67,7 +67,14 @@ struct VoiceInfoView: View {
                         .font(.title3)
                 }
 
+                Rectangle()
+                    .fill(Color.gray.opacity(0.5))
+                    .frame(height: 2)
+                    .padding(.vertical, 8)
+
+
                 HStack() {
+                    Spacer()
                     Group {
                         if showAudioVisualizer {
                             if let playingVoiceImage {
@@ -94,11 +101,11 @@ struct VoiceInfoView: View {
                             stopVoicePlay()
                         }
                     }
-
+                    Spacer()
                 }
-                .offset(x: 75, y: 30)
+                .padding(.vertical, 15)
             }
-            .padding(.horizontal, 75)
+            .padding(.horizontal, 40)
             .onDisappear(perform: {
                 stopVoicePlay()
             })

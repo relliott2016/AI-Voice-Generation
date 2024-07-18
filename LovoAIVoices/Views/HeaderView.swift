@@ -18,7 +18,14 @@ struct HeaderView: View {
                 case .success(let image):
                     image
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
+                        .frame(width: 350, height: 350)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.white, lineWidth: 2)
+                            )
+                            .shadow(radius: 10)
                 case .failure(_):
                     Image(systemName: "photo")
                         .resizable()
