@@ -9,17 +9,18 @@ import Foundation
 import SwiftUI
 
 struct VoiceListView: View {
+    @StateObject private var imageCache = ImageCache()
     @StateObject var voicesPageViewModel = VoicesPageViewModel(voicesDataSource: VoicesDataSource.init())
 
     var body: some View {
         NavigationStack {
             List(voicesPageViewModel.voices) { voice in
                 NavigationLink(
-                    destination: VoiceDetailView(voice: voice),
+                    destination: VoiceDetailView(imageCache: imageCache, voice: voice),
                     label: {
                         HStack(spacing: 50) {
                             Spacer()
-                            VoiceCell(voiceViewModel: .init(voice: voice))
+                            VoiceListItemView(voiceViewModel: .init(voice: voice), imageCache: imageCache)
                                 .onAppear {
                                     if voice == voicesPageViewModel.voices.last {
                                         voicesPageViewModel.fetchNextpage()
@@ -29,11 +30,10 @@ struct VoiceListView: View {
                         }
                     }
                 )
-
                 .foregroundStyle(.clear)
+                .listRowSeparator(.hidden)
                 .padding(.bottom)
                 .padding(.leading)
-                .listRowSeparator(.hidden)
             }
             .onAppear {
                 voicesPageViewModel.fetchVoices()

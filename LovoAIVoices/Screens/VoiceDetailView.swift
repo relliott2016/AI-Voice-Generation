@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct VoiceDetailView: View {
+    @ObservedObject var imageCache: ImageCache
     let voice: Voice
 
     var body: some View {
         CenteredTitleView(title: voice.displayName)
         VStack {
-            HeaderView(voice: voice)
+            if let imageView = imageCache.getImage(for: voice) {
+                StyledImageView(image: imageView)
+            } else {
+                ProgressView()
+                    .onAppear {
+                        imageCache.fetchImage(for: voice)
+                    }
+            }
+            Spacer().frame(height: 20)
             VoiceInfoView(voice: voice)
                 .offset(y: -50)
             Spacer()
@@ -22,5 +31,5 @@ struct VoiceDetailView: View {
 }
 
 #Preview {
-    VoiceDetailView(voice: Voice.mock)
+    VoiceDetailView(imageCache: ImageCache(), voice: Voice.mock)
 }
