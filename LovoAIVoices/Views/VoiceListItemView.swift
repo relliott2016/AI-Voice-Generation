@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 @MainActor
-struct VoiceCell: View {
+struct VoiceListItemView: View {
     @ObservedObject var voiceViewModel: VoiceViewModel
+    @ObservedObject var imageCache: ImageCache
     private let locale: Locale = .current
 
     var voice: Voice {
@@ -19,20 +20,16 @@ struct VoiceCell: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            AsyncImage(url: voice.imageUrl, content: { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 250, height: 350)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.white, lineWidth: 2)
-                    )
-                    .shadow(radius: 10)
-            }, placeholder: {
-                ProgressView()
-            })
+            Group {
+                if let personImage = imageCache.getImage(for: voice) {
+                    StyledImageView(image: personImage)
+                } else {
+                    ProgressView()
+                        .onAppear() {
+                            imageCache.fetchImage(for: voice)
+                        }
+                }
+            }
 
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
@@ -46,7 +43,7 @@ struct VoiceCell: View {
                         .foregroundColor(.white)
                 }
                 .padding()
-
+                
                 Spacer()
 
                 ZStack {
@@ -60,7 +57,7 @@ struct VoiceCell: View {
                 }
                 .padding()
             }
-            .frame(width: 250)
+            .frame(width: 350)
             .background(Color.primary.opacity(0.2))
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             .cornerRadius(12)
@@ -69,9 +66,10 @@ struct VoiceCell: View {
     }
 }
 
-struct VoiceCell_Previews: PreviewProvider {
+struct VoiceListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceCell(voiceViewModel: .init(voice: .mock))
+        let imageCache = ImageCache()
+        VoiceListItemView(voiceViewModel: .init(voice: .mock), imageCache: imageCache)
             .previewLayout(.sizeThatFits)
     }
 }

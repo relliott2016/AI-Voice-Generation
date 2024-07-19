@@ -26,13 +26,14 @@ struct VoiceInfoView: View {
     var body: some View {
         HStack(alignment: .center) {
             audioVisualizer
-                .offset(y: -90)
+                .offset(y: -30)
                 .opacity(showAudioVisualizer ? 1 : 0)
                 .onReceive(NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime)) { _ in
                     showAudioVisualizer = false
                 }
 
         }
+
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
@@ -71,7 +72,6 @@ struct VoiceInfoView: View {
                     .fill(Color.gray.opacity(0.5))
                     .frame(height: 2)
                     .padding(.vertical, 8)
-
 
                 HStack() {
                     Spacer()
