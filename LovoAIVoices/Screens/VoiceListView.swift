@@ -22,7 +22,7 @@ struct VoiceListView: View {
                             Spacer()
                             VoiceListItemView(voiceViewModel: .init(voice: voice), imageCache: imageCache)
                                 .onAppear {
-                                    if voice == voicesPageViewModel.voices.last {
+                                    if voice == voicesPageViewModel.voices.last && !voicesPageViewModel.isLoading {
                                         voicesPageViewModel.fetchNextpage()
                                     }
                                 }
@@ -36,7 +36,9 @@ struct VoiceListView: View {
                 .padding(.leading)
             }
             .onAppear {
-                voicesPageViewModel.fetchVoices()
+                if voicesPageViewModel.voices.isEmpty {
+                    voicesPageViewModel.fetchVoices()
+                }
             }
             .listStyle(.plain)
             .padding(.top, 20)
