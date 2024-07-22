@@ -9,6 +9,7 @@ import Foundation
 
 class VoicesPageViewModel: ObservableObject {
     @Published var voices: [Datum] = []
+    @Published var imageCache = ImageCache()
     private let voicesDataSource: VoicesDataSource
     private var isLoading = false
     private var currentPage = 1
@@ -27,6 +28,10 @@ class VoicesPageViewModel: ObservableObject {
                     voices = fetchedVoices
                     voices = voices.uniqued()
 
+                    // Preload images
+                    for voice in voices {
+                        imageCache.fetchImage(for: voice)
+                    }
                 }
             } catch {
                 print("Error: fetching voices...")
@@ -44,6 +49,11 @@ class VoicesPageViewModel: ObservableObject {
                 await MainActor.run {
                     voices += fetchedVoices
                     voices = voices.uniqued()
+
+                    // Preload images for the new voices
+                    for voice in fetchedVoices {
+                        imageCache.fetchImage(for: voice)
+                    }
                 }
             } catch {
                 print("Error: fetching next page...")

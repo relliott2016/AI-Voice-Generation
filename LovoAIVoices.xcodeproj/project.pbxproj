@@ -11,9 +11,6 @@
 		F809599D2B74F95D00F8FDF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599C2B74F95D00F8FDF7 /* ContentView.swift */; };
 		F809599F2B74F95E00F8FDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F809599E2B74F95E00F8FDF7 /* Assets.xcassets */; };
 		F80959A22B74F95E00F8FDF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */; };
-		F80959AC2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959AB2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift */; };
-		F80959B62B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959B52B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift */; };
-		F80959B82B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959B72B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift */; };
 		F80959C92B74FA1900F8FDF7 /* VoicesPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C62B74FA1900F8FDF7 /* VoicesPageViewModel.swift */; };
 		F80959CA2B74FA1900F8FDF7 /* VoicesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C72B74FA1900F8FDF7 /* VoicesDataSource.swift */; };
 		F80959CD2B74FA4A00F8FDF7 /* Voices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959CC2B74FA4A00F8FDF7 /* Voices.swift */; };
@@ -59,10 +56,7 @@
 		F809599E2B74F95E00F8FDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F80959A72B74F95E00F8FDF7 /* LovoAIVoicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovoAIVoicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F80959AB2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesTests.swift; sourceTree = "<group>"; };
 		F80959B12B74F95E00F8FDF7 /* LovoAIVoicesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovoAIVoicesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F80959B52B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesUITests.swift; sourceTree = "<group>"; };
-		F80959B72B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F80959C62B74FA1900F8FDF7 /* VoicesPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesPageViewModel.swift; sourceTree = "<group>"; };
 		F80959C72B74FA1900F8FDF7 /* VoicesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesDataSource.swift; sourceTree = "<group>"; };
 		F80959CC2B74FA4A00F8FDF7 /* Voices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voices.swift; sourceTree = "<group>"; };
@@ -113,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				F80959992B74F95D00F8FDF7 /* LovoAIVoices */,
-				F80959AA2B74F95E00F8FDF7 /* LovoAIVoicesTests */,
-				F80959B42B74F95E00F8FDF7 /* LovoAIVoicesUITests */,
 				F80959982B74F95D00F8FDF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,23 +142,6 @@
 				F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F80959AA2B74F95E00F8FDF7 /* LovoAIVoicesTests */ = {
-			isa = PBXGroup;
-			children = (
-				F80959AB2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift */,
-			);
-			path = LovoAIVoicesTests;
-			sourceTree = "<group>";
-		};
-		F80959B42B74F95E00F8FDF7 /* LovoAIVoicesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F80959B52B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift */,
-				F80959B72B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift */,
-			);
-			path = LovoAIVoicesUITests;
 			sourceTree = "<group>";
 		};
 		F80959C42B74F97800F8FDF7 /* DataSources */ = {
@@ -398,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80959AC2B74F95E00F8FDF7 /* LovoAIVoicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,8 +380,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80959B62B74F95E00F8FDF7 /* LovoAIVoicesUITests.swift in Sources */,
-				F80959B82B74F95E00F8FDF7 /* LovoAIVoicesUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +583,6 @@
 		F80959BF2B74F95E00F8FDF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -631,7 +602,6 @@
 		F80959C02B74F95E00F8FDF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -651,7 +621,6 @@
 		F80959C22B74F95E00F8FDF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UUKYGG9M85;
@@ -669,7 +638,6 @@
 		F80959C32B74F95E00F8FDF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UUKYGG9M85;
