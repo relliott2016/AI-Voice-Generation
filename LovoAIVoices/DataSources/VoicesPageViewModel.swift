@@ -11,15 +11,19 @@ class VoicesPageViewModel: ObservableObject {
     @Published var voices: [Datum] = []
     @Published var imageCache = ImageCache()
     private let voicesDataSource: VoicesDataSource
-    private var isLoading = false
+    var isLoading = false
     private var currentPage = 1
+    private var lastFetchedPage = 0
 
     init(voicesDataSource: VoicesDataSource) {
         self.voicesDataSource = voicesDataSource
     }
 
     func fetchVoices() {
+        guard !isLoading else { return }
+        isLoading = true
         currentPage = 1
+        lastFetchedPage = 0
 
         Task {
             do {
@@ -32,16 +36,20 @@ class VoicesPageViewModel: ObservableObject {
                     for voice in voices {
                         imageCache.fetchImage(for: voice)
                     }
+                    lastFetchedPage = currentPage
                 }
             } catch {
                 print("Error: fetching voices...")
                 print(error.localizedDescription)
             }
+            isLoading = false
         }
     }
 
     func fetchNextpage() {
         currentPage += 1
+        guard !isLoading else { return }
+        isLoading = true
 
         Task {
             do {
@@ -54,19 +62,16 @@ class VoicesPageViewModel: ObservableObject {
                     for voice in fetchedVoices {
                         imageCache.fetchImage(for: voice)
                     }
+                    lastFetchedPage = currentPage
                 }
             } catch {
                 print("Error: fetching next page...")
             }
+            isLoading = false
         }
     }
 
     private func fetchPage(_ page: Int) async throws -> [Datum] {
-        guard isLoading == false else { return [] }
-
-        isLoading = true
-        defer { isLoading = false }
-
         let voices = try await voicesDataSource.fetchVoices(page: page)
         return voices.uniqued()
     }
