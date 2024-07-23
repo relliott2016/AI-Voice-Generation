@@ -14,12 +14,12 @@ struct VoiceInfoView: View {
     var audioVisualizer: AudioVisualizer
     var playVoiceImage: UIImage? = "▶️".textToImage()
     var playingVoiceImage: UIImage? = "⏸️".textToImage()
-    let voice: Voice
+    let viewModel: VoiceViewModel
     private let locale: Locale = .current
     private let audioStreamer = AudioStreamer()
 
-    init(voice: Voice) {
-        self.voice = voice
+    init(viewModel: VoiceViewModel) {
+        self.viewModel = viewModel
         self.audioVisualizer = AudioVisualizer()
     }
 
@@ -40,7 +40,7 @@ struct VoiceInfoView: View {
                     Text("Gender:")
                         .font(.title3)
                     Spacer()
-                    Text(voice.gender.rawValue.capitalized)
+                    Text(viewModel.gender.capitalized)
                         .font(.title3)
                 }
 
@@ -48,7 +48,7 @@ struct VoiceInfoView: View {
                     Text("Type:")
                         .font(.title3)
                     Spacer()
-                    Text(voice.speakerType.rawValue.capitalized)
+                    Text(viewModel.speakerType.capitalized)
                         .font(.title3)
                 }
                 
@@ -56,7 +56,7 @@ struct VoiceInfoView: View {
                     Text("Country:")
                         .font(.title3)
                     Spacer()
-                    Text(Locale.current.region(cultureCode: voice.locale.capitalized) ?? "")
+                    Text(Locale.current.region(cultureCode: viewModel.locale.capitalized) ?? "")
                         .font(.title3)
                 }
 
@@ -64,7 +64,7 @@ struct VoiceInfoView: View {
                     Text("Language:")
                         .font(.title3)
                     Spacer()
-                    Text(Locale.current.language(cultureCode: voice.locale.capitalized) ?? "")
+                    Text(Locale.current.language(cultureCode: viewModel.locale.capitalized) ?? "")
                         .font(.title3)
                 }
 
@@ -94,7 +94,7 @@ struct VoiceInfoView: View {
                     .frame(height: 35)
                     .onTapGesture {
                         if showAudioVisualizer == false {
-                            guard let ttsUrl = voice.speakerStyles[0].sampleTTSURL else { return }
+                            guard let ttsUrl = viewModel.sampleTTSURL else { return }
                             audioStreamer.playVoice(sampleTTSURL: ttsUrl )
                             showAudioVisualizer = true
                         } else {
@@ -119,5 +119,5 @@ struct VoiceInfoView: View {
 }
 
 #Preview {
-    VoiceInfoView(voice: Voice.mock)
+    VoiceInfoView(viewModel: .init(voice: Voice.mock))
 }

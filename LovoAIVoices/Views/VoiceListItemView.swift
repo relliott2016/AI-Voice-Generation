@@ -10,35 +10,31 @@ import SwiftUI
 
 @MainActor
 struct VoiceListItemView: View {
-    @ObservedObject var voiceViewModel: VoiceViewModel
+    @ObservedObject var viewModel: VoiceViewModel
     @ObservedObject var imageCache: ImageCache
     private let locale: Locale = .current
-
-    var voice: Voice {
-        voiceViewModel.voice
-    }
 
     var body: some View {
         ZStack(alignment: .bottom) {
             Group {
-                if let personImage = imageCache.getImage(for: voice) {
+                if let personImage = imageCache.getImage(for: viewModel.voiceId) {
                     StyledImageView(image: personImage)
                 } else {
                     ProgressView()
                         .onAppear() {
-                            imageCache.fetchImage(for: voice)
+                            imageCache.fetchImage(for: viewModel)
                         }
                 }
             }
 
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("\(voice.displayName)")
+                    Text("\(viewModel.name)")
                         .font(.headline)
                         .bold()
                         .foregroundColor(.white)
 
-                    Text("\(Locale.current.language(cultureCode: voice.locale) ?? "".capitalized) \(voice.gender.rawValue.capitalized)")
+                    Text("\(Locale.current.language(cultureCode: viewModel.locale) ?? "".capitalized) \(viewModel.gender.capitalized)")
                         .font(.subheadline)
                         .foregroundColor(.white)
                 }
@@ -69,7 +65,7 @@ struct VoiceListItemView: View {
 struct VoiceListItemView_Previews: PreviewProvider {
     static var previews: some View {
         let imageCache = ImageCache()
-        VoiceListItemView(voiceViewModel: .init(voice: .mock), imageCache: imageCache)
+        VoiceListItemView(viewModel: .init(voice: .mock), imageCache: imageCache)
             .previewLayout(.sizeThatFits)
     }
 }

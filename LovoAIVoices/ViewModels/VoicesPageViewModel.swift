@@ -8,7 +8,7 @@
 import Foundation
 
 class VoicesPageViewModel: ObservableObject {
-    @Published var voices: [Datum] = []
+    @Published var voices: VoiceArray = []
     @Published var imageCache = ImageCache()
     private let voicesDataSource: VoicesDataSource
     var isLoading = false
@@ -34,7 +34,7 @@ class VoicesPageViewModel: ObservableObject {
 
                     // Preload images
                     for voice in voices {
-                        imageCache.fetchImage(for: voice)
+                        imageCache.fetchImage(for: .init(voice: voice))
                     }
                     lastFetchedPage = currentPage
                 }
@@ -60,7 +60,7 @@ class VoicesPageViewModel: ObservableObject {
 
                     // Preload images for the new voices
                     for voice in fetchedVoices {
-                        imageCache.fetchImage(for: voice)
+                        imageCache.fetchImage(for: .init(voice: voice))
                     }
                     lastFetchedPage = currentPage
                 }
