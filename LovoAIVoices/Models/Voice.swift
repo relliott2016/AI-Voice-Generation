@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 
 typealias Voice = Datum
+typealias VoiceArray = [Voice]
+
+struct Voices: Decodable {
+    var totalCount, count, page, limit: Int
+    var data: VoiceArray
+}
 
 struct Datum: Decodable, Identifiable {
 

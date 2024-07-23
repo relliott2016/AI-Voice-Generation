@@ -16,11 +16,11 @@ struct VoiceListView: View {
         NavigationStack {
             List(voicesPageViewModel.voices) { voice in
                 NavigationLink(
-                    destination: VoiceDetailView(imageCache: imageCache, voice: voice),
+                    destination: VoiceDetailView(imageCache: imageCache, viewModel: .init(voice: voice)),
                     label: {
                         HStack(spacing: 50) {
                             Spacer()
-                            VoiceListItemView(voiceViewModel: .init(voice: voice), imageCache: imageCache)
+                            VoiceListItemView(viewModel: .init(voice: voice), imageCache: imageCache)
                                 .onAppear {
                                     if voice == voicesPageViewModel.voices.last && !voicesPageViewModel.isLoading {
                                         voicesPageViewModel.fetchNextpage()
