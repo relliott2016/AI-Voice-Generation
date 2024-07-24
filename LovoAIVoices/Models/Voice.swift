@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 typealias Voice = Datum
 typealias VoiceArray = [Voice]
@@ -61,8 +60,8 @@ struct Datum: Decodable, Identifiable {
     }
 }
 
-extension Datum: Hashable {
-    static func == (lhs: Datum, rhs: Datum) -> Bool {
+extension Voice: Hashable {
+    static func == (lhs: Voice, rhs: Voice) -> Bool {
         return lhs.id == rhs.id
     }
 
@@ -71,12 +70,10 @@ extension Datum: Hashable {
     }
 }
 
-extension Datum {
+extension Voice {
     var imageUrl: URL? {
         return URL(string: self.imageURL)
     }
-}
 
-extension Voice {
     static let mock: Voice = .init(id: "63b4094b241a82001d51c5fc", displayName: "Aadesh Madar", locale: "kn-IN", gender: Datum.Gender.male, imageURL: "https://cdn.lovo.ai/f5349e2d/Aadesh+Madar.jpeg", speakerType: Datum.SpeakerType.global, speakerStyles: [Datum.SpeakerStyle(deprecated: false, id: "63b4094b241a82001d51c5fd", displayName: "Default", sampleTTSURL: Optional("https://cdn.lovo.ai/speaker-tts-samples/prod/kn-IN-GaganNeural-default.wav"))], ageRange: nil)
 }
