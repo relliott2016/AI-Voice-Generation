@@ -15,7 +15,7 @@ class VoicesDataSource {
         var components = URLComponents(string: GlobalConstants.lovoGennyURL + "/api/v1/speakers")
         let sortItem = URLQueryItem(name: "sort", value: "displayName:1")
         let pageItem = URLQueryItem(name: "page", value: String(page))
-        let limitItem = URLQueryItem(name: "limit", value: String(25))
+        let limitItem = URLQueryItem(name: "limit", value: String(10))
         components?.queryItems = [sortItem, pageItem, limitItem]
 
         guard let url = components?.url else { return [] }
