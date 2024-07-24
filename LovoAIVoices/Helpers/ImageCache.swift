@@ -13,12 +13,12 @@ class ImageCache: ObservableObject {
     private var cache = NSCache<NSString, UIImage>()
     private let imageFetchQueue = DispatchQueue(label: "com.LovoAIVoices", attributes: .concurrent)
 
-    func fetchImage(for voiceViewModel: VoiceViewModel) {
-        guard let url = voiceViewModel.imageURL, imageViews[voiceViewModel.voiceId] == nil else { return }
+    func fetchImage(for viewModel: VoiceViewModel) {
+        guard let url = viewModel.imageURL, imageViews[viewModel.voiceId] == nil else { return }
 
-        if let cachedImage = cache.object(forKey: voiceViewModel.voiceId as NSString) {
+        if let cachedImage = cache.object(forKey: viewModel.voiceId as NSString) {
             DispatchQueue.main.async {
-                self.imageViews[voiceViewModel.voiceId] = Image(uiImage: cachedImage)
+                self.imageViews[viewModel.voiceId] = Image(uiImage: cachedImage)
             }
             return
         }
@@ -27,8 +27,8 @@ class ImageCache: ObservableObject {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, let uiImage = UIImage(data: data) else { return }
                 DispatchQueue.main.async {
-                    self.cache.setObject(uiImage, forKey: voiceViewModel.voiceId as NSString)
-                    self.imageViews[voiceViewModel.voiceId] = Image(uiImage: uiImage)
+                    self.cache.setObject(uiImage, forKey: viewModel.voiceId as NSString)
+                    self.imageViews[viewModel.voiceId] = Image(uiImage: uiImage)
                 }
             }.resume()
         }
