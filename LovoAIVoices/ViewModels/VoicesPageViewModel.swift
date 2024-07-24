@@ -10,13 +10,13 @@ import Foundation
 class VoicesPageViewModel: ObservableObject {
     @Published var voices: VoiceArray = []
     @Published var imageCache = ImageCache()
-    private let voicesDataSource: VoicesDataSource
+    private let dataSource: VoicesDataSource
     var isLoading = false
     private var currentPage = 1
     private var lastFetchedPage = 0
 
     init(voicesDataSource: VoicesDataSource) {
-        self.voicesDataSource = voicesDataSource
+        self.dataSource = voicesDataSource
     }
 
     func fetchVoices() {
@@ -72,7 +72,7 @@ class VoicesPageViewModel: ObservableObject {
     }
 
     private func fetchPage(_ page: Int) async throws -> [Datum] {
-        let voices = try await voicesDataSource.fetchVoices(page: page)
+        let voices = try await dataSource.fetchVoices(page: page)
         return voices.uniqued()
     }
 }

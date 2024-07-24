@@ -31,5 +31,5 @@ struct VoiceDetailView: View {
 }
 
 #Preview {
-    VoiceDetailView(imageCache: ImageCache(),viewModel: .init(voice: Voice.mock))
+    VoiceDetailView(imageCache: ImageCache(), viewModel: .init(voice: Voice.mock))
 }
