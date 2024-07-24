@@ -71,7 +71,7 @@ class VoicesPageViewModel: ObservableObject {
         }
     }
 
-    private func fetchPage(_ page: Int) async throws -> [Datum] {
+    private func fetchPage(_ page: Int) async throws -> VoiceArray {
         let voices = try await dataSource.fetchVoices(page: page)
         return voices.uniqued()
     }
