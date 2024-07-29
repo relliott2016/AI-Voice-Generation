@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct VoiceListView: View {
-    @StateObject private var imageCache = ImageCache()
-    @StateObject var voicesPageViewModel = VoicesPageViewModel(voicesDataSource: VoicesDataSource.init())
+
+    @StateObject private var imageCache: ImageCache
+    @StateObject private var voicesPageViewModel: VoicesPageViewModel
+
+    init() {
+        _imageCache = StateObject(wrappedValue: ImageCache())
+        let viewModel = VoicesPageViewModel(voicesDataSource: VoicesDataSource(), imageCache: ImageCache())
+        _voicesPageViewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
         NavigationStack {

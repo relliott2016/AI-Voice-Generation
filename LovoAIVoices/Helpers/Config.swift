@@ -13,7 +13,7 @@ class Config {
             fatalError("LOVO_GENNY_API_KEY key entry is missing from the Xcode target info tab")
         }
 
-        guard apiKey != GlobalConstants.apiKeyPlaceHolder else {
+        guard apiKey != GlobalConstants.APIKeys.lovoGennyPlaceholder else {
             fatalError("You need to replace the LOVO_GENNY_API_KEY placeholder with your API key on the Xcode target info tab")
         }
 

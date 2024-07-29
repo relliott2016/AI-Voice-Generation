@@ -25,5 +25,5 @@ struct StyledImageView: View {
 }
 
 #Preview {
-    StyledImageView(image: Image(systemName: "photo"))
+    StyledImageView(image: GlobalConstants.Images.placeholder)
 }

@@ -75,5 +75,5 @@ extension Voice {
         return URL(string: self.imageURL)
     }
 
-    static let mock: Voice = .init(id: "63b4094b241a82001d51c5fc", displayName: "Aadesh Madar", locale: "kn-IN", gender: Datum.Gender.male, imageURL: "https://cdn.lovo.ai/f5349e2d/Aadesh+Madar.jpeg", speakerType: Datum.SpeakerType.global, speakerStyles: [Datum.SpeakerStyle(deprecated: false, id: "63b4094b241a82001d51c5fd", displayName: "Default", sampleTTSURL: Optional("https://cdn.lovo.ai/speaker-tts-samples/prod/kn-IN-GaganNeural-default.wav"))], ageRange: nil)
+    static let mock: Voice = .init(id: "63b4094b241a82001d51c5fc", displayName: "Aadesh Madar", locale: "kn-IN", gender: Datum.Gender.male, imageURL: "https://cdn.lovo.ai/f5349e2d/Aadesh+Madar.jpeg", speakerType: Datum.SpeakerType.global, speakerStyles: [Datum.SpeakerStyle(deprecated: false, id: "63b4094b241a82001d51c5fd", displayName: "Aadesh Mader", sampleTTSURL: Optional("https://cdn.lovo.ai/speaker-tts-samples/prod/kn-IN-GaganNeural-default.wav"))], ageRange: nil)
 }
