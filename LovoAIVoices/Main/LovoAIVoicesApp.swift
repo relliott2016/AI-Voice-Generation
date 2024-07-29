@@ -11,7 +11,12 @@ import SwiftUI
 struct LovoAIVoicesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isNotTesting {
+                ContentView()
+            }
         }
+    }
+    private var isNotTesting: Bool {
+        NSClassFromString("XCTestCase") == nil
     }
 }

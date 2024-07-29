@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class ImageCache: ObservableObject {
+class ImageCache: ImageCaching, ObservableObject {
     @Published var imageViews: [String: Image] = [:]
     private var cache = NSCache<NSString, UIImage>()
     private let imageFetchQueue = DispatchQueue(label: "com.LovoAIVoices", attributes: .concurrent)
