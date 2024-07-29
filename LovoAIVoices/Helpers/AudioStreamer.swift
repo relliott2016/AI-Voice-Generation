@@ -13,7 +13,11 @@ class AudioStreamer: NSObject {
     private var player: AVPlayer?
 
     func playVoice(sampleTTSURL: String) {
-        guard let url = URL.init(string: sampleTTSURL) else { return }
+        guard let url = URL(string: sampleTTSURL) else {
+            print("Invalid URL: \(sampleTTSURL)")
+            return
+        }
+
         let playerItem = AVPlayerItem(url: url)
         if player == nil {
             player = AVPlayer(playerItem: playerItem)

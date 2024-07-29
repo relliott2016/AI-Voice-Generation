@@ -94,7 +94,10 @@ struct VoiceInfoView: View {
                     .frame(height: 35)
                     .onTapGesture {
                         if showAudioVisualizer == false {
-                            guard let ttsUrl = viewModel.sampleTTSURL else { return }
+                            guard let ttsUrl = viewModel.sampleTTSURL else {
+                                print("Invalid URL: \(String(describing: viewModel.sampleTTSURL))")
+                                return
+                            }
                             audioStreamer.playVoice(sampleTTSURL: ttsUrl )
                             showAudioVisualizer = true
                         } else {
