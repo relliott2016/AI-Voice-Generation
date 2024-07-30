@@ -1,5 +1,5 @@
 //
-//  VoiceListView.swift
+//  SpeakersListView.swift
 //  LovoAIVoices
 //
 //  Created by Robbie Elliott on 2024-02-08.
@@ -7,29 +7,29 @@
 
 import SwiftUI
 
-struct VoiceListView: View {
+struct SpeakersListView: View {
 
     @StateObject private var imageCache: ImageCache
-    @StateObject private var voicesPageViewModel: VoicesPageViewModel
+    @StateObject private var speakersPageViewModel: SpeakersPageViewModel
 
     init() {
         _imageCache = StateObject(wrappedValue: ImageCache())
-        let viewModel = VoicesPageViewModel(voicesDataSource: VoicesDataSource(), imageCache: ImageCache())
-        _voicesPageViewModel = StateObject(wrappedValue: viewModel)
+        let viewModel = SpeakersPageViewModel(speakersDataSource: SpeakersDataSource(), imageCache: ImageCache())
+        _speakersPageViewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
         NavigationStack {
-            List(voicesPageViewModel.voices) { voice in
+            List(speakersPageViewModel.speakers) { speaker in
                 NavigationLink(
-                    destination: VoiceDetailView(imageCache: imageCache, viewModel: .init(voice: voice)),
+                    destination: SpeakerDetailView(imageCache: imageCache, viewModel: .init(speaker: speaker)),
                     label: {
                         HStack(spacing: 50) {
                             Spacer()
-                            VoiceListItemView(viewModel: .init(voice: voice), imageCache: imageCache)
+                            SpeakersListItemView(viewModel: .init(speaker: speaker), imageCache: imageCache)
                                 .onAppear {
-                                    if voice == voicesPageViewModel.voices.last && !voicesPageViewModel.isLoading {
-                                        voicesPageViewModel.fetchNextpage()
+                                    if speaker == speakersPageViewModel.speakers.last && !speakersPageViewModel.isLoading {
+                                        speakersPageViewModel.fetchNextpage()
                                     }
                                 }
                             Spacer()
@@ -42,8 +42,8 @@ struct VoiceListView: View {
                 .padding(.leading)
             }
             .onAppear {
-                if voicesPageViewModel.voices.isEmpty {
-                    voicesPageViewModel.fetchVoices()
+                if speakersPageViewModel.speakers.isEmpty {
+                    speakersPageViewModel.fetchSpeakers()
                 }
             }
             .listStyle(.plain)
@@ -52,7 +52,7 @@ struct VoiceListView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     HStack(spacing: 0) {
-                        Text("Voices")
+                        Text("Speakers")
                             .font(.largeTitle)
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .center) // Centered large title
@@ -65,7 +65,7 @@ struct VoiceListView: View {
 }
 
 #Preview {
-    VoiceListView()
+    SpeakersListView()
 }
 
 

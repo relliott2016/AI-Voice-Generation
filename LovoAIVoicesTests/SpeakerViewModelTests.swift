@@ -8,28 +8,28 @@
 import Testing
 @testable import LovoAIVoices
 
-struct VoiceViewModelTests {
+struct SpeakerViewModelTests {
 
-    @Test func testVoiceViewModelProperties() async throws {
+    @Test func testSpeakerViewModelProperties() async throws {
         // Given
-        let voice = Voice.mock
-        let imageUrl = voice.imageURL
-        let displayName = voice.displayName
-        let locale = voice.locale
-        let gender = voice.gender
-        let id = voice.id
-        let speakerType = voice.speakerType
-        let sampleTTSURL = voice.speakerStyles.first?.sampleTTSURL
+        let speaker = Speaker.mock
+        let imageUrl = speaker.imageURL
+        let displayName = speaker.displayName
+        let locale = speaker.locale
+        let gender = speaker.gender
+        let id = speaker.id
+        let speakerType = speaker.speakerType
+        let sampleTTSURL = speaker.speakerStyles.first?.sampleTTSURL
 
         // When
-        let viewModel = VoiceViewModel(voice: voice)
+        let viewModel = SpeakerViewModel(speaker: speaker)
 
         // Then
         #expect(viewModel.imageURL?.absoluteString == imageUrl)
         #expect(viewModel.name == displayName)
         #expect(viewModel.locale == locale)
         #expect(viewModel.gender == gender.rawValue)
-        #expect(viewModel.voiceId == id)
+        #expect(viewModel.speakerId == id)
         #expect(viewModel.speakerType == speakerType.rawValue)
         #expect(viewModel.sampleTTSURL == sampleTTSURL)
     }

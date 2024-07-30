@@ -1,5 +1,5 @@
 //
-//  VoiceView.swift
+//  SpeakerDetailView.swift
 //  LovoAIVoices
 //
 //  Created by Robbie Elliott on 2024-02-09.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct VoiceDetailView: View {
+struct SpeakerDetailView: View {
     @ObservedObject var imageCache: ImageCache
-    let viewModel: VoiceViewModel
+    let viewModel: SpeakerViewModel
 
     var body: some View {
         CenteredTitleView(title: viewModel.name)
         VStack {
-            if let imageView = imageCache.getImage(for: viewModel.voiceId) {
+            if let imageView = imageCache.getImage(for: viewModel.speakerId) {
                 StyledImageView(image: imageView)
             } else {
                 ProgressView()
@@ -23,7 +23,7 @@ struct VoiceDetailView: View {
                     }
             }
             Spacer().frame(height: 20)
-            VoiceInfoView(viewModel: viewModel)
+            SpeakerInfoView(viewModel: viewModel)
                 .offset(y: -50)
             Spacer()
         }
@@ -31,5 +31,5 @@ struct VoiceDetailView: View {
 }
 
 #Preview {
-    VoiceDetailView(imageCache: ImageCache(), viewModel: .init(voice: Voice.mock))
+    SpeakerDetailView(imageCache: ImageCache(), viewModel: .init(speaker: Speaker.mock))
 }

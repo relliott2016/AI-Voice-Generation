@@ -1,5 +1,5 @@
 //
-//  Voice.swift
+//  Speaker.swift
 //  LovoAIVoices
 //
 //  Created by Robbie Elliott on 2024-02-08.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-typealias Voice = Datum
-typealias VoiceArray = [Voice]
+typealias Speaker = SpeakerData
+typealias Speakers = [Speaker]
 
-struct Voices: Decodable {
+struct SpeakerResponse: Decodable {
     var totalCount, count, page, limit: Int
-    var data: VoiceArray
+    var data: Speakers
 }
 
-struct Datum: Decodable, Identifiable {
+struct SpeakerData: Decodable, Identifiable {
 
     var id, displayName, locale: String
     var gender: Gender
@@ -31,8 +31,8 @@ struct Datum: Decodable, Identifiable {
     }
 
     enum AgeRange: String, Codable {
-        case children = "children"
-        case mature = "mature"
+        case child = "child"
+        case mature = "mature_adult"
         case youngAdult = "young_adult"
     }
 
@@ -60,8 +60,8 @@ struct Datum: Decodable, Identifiable {
     }
 }
 
-extension Voice: Hashable {
-    static func == (lhs: Voice, rhs: Voice) -> Bool {
+extension Speaker: Hashable {
+    static func == (lhs: Speaker, rhs: Speaker) -> Bool {
         return lhs.id == rhs.id
     }
 
@@ -70,10 +70,10 @@ extension Voice: Hashable {
     }
 }
 
-extension Voice {
+extension Speaker {
     var imageUrl: URL? {
         return URL(string: self.imageURL)
     }
 
-    static let mock: Voice = .init(id: "63b4094b241a82001d51c5fc", displayName: "Aadesh Madar", locale: "kn-IN", gender: Datum.Gender.male, imageURL: "https://cdn.lovo.ai/f5349e2d/Aadesh+Madar.jpeg", speakerType: Datum.SpeakerType.global, speakerStyles: [Datum.SpeakerStyle(deprecated: false, id: "63b4094b241a82001d51c5fd", displayName: "Aadesh Mader", sampleTTSURL: Optional("https://cdn.lovo.ai/speaker-tts-samples/prod/kn-IN-GaganNeural-default.wav"))], ageRange: nil)
+    static let mock: Speaker = .init(id: "63b4094b241a82001d51c5fc", displayName: "Aadesh Madar", locale: "kn-IN", gender: SpeakerData.Gender.male, imageURL: "https://cdn.lovo.ai/f5349e2d/Aadesh+Madar.jpeg", speakerType: SpeakerData.SpeakerType.global, speakerStyles: [SpeakerData.SpeakerStyle(deprecated: false, id: "63b4094b241a82001d51c5fd", displayName: "Aadesh Mader", sampleTTSURL: Optional("https://cdn.lovo.ai/speaker-tts-samples/prod/kn-IN-GaganNeural-default.wav"))], ageRange: nil)
 }

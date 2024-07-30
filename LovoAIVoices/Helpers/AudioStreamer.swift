@@ -8,7 +8,6 @@
 import Foundation
 import AVKit
 
-@Observable
 class AudioStreamer: NSObject {
     private var player: AVPlayer?
 

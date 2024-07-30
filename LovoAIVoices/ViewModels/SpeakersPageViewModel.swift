@@ -7,20 +7,20 @@
 
 import Foundation
 
-class VoicesPageViewModel: ObservableObject {
-    @Published var voices: VoiceArray = []
+class SpeakersPageViewModel: ObservableObject {
+    @Published var speakers: Speakers = []
     @Published var imageCache:ImageCaching
-    private let dataSource: VoicesDataSourcing
+    private let dataSource: SpeakersDataSourcing
     var isLoading = false
     private var currentPage = 1
     private var lastFetchedPage = 0
 
-    init(voicesDataSource: VoicesDataSourcing, imageCache: ImageCaching) {
-        self.dataSource = voicesDataSource
+    init(speakersDataSource: SpeakersDataSourcing, imageCache: ImageCaching) {
+        self.dataSource = speakersDataSource
         self.imageCache = imageCache
     }
 
-    func fetchVoices() {
+    func fetchSpeakers() {
         guard !isLoading else { return }
         isLoading = true
         currentPage = 1
@@ -28,18 +28,18 @@ class VoicesPageViewModel: ObservableObject {
 
         Task {
             do {
-                let fetchedVoices = try await fetchPage(currentPage)
+                let fetchedSpeakers = try await fetchPage(currentPage)
                 await MainActor.run {
-                    voices = fetchedVoices
+                    speakers = fetchedSpeakers
 
                     // Preload images
-                    for voice in voices {
-                        imageCache.fetchImage(for: .init(voice: voice))
+                    for speaker in speakers {
+                        imageCache.fetchImage(for: .init(speaker: speaker))
                     }
                     lastFetchedPage = currentPage
                 }
             } catch {
-                print("Error: fetching voices...")
+                print("Error: fetching speakers...")
                 print(error.localizedDescription)
             }
             isLoading = false
@@ -53,14 +53,14 @@ class VoicesPageViewModel: ObservableObject {
 
         Task {
             do {
-                let fetchedVoices = try await fetchPage(currentPage)
+                let fetchedSpeakers = try await fetchPage(currentPage)
                 await MainActor.run {
-                    voices += fetchedVoices
-                    voices = voices.uniqued()
+                    speakers += fetchedSpeakers
+                    speakers = speakers.uniqued()
 
                     // Preload images for the new voices
-                    for voice in fetchedVoices {
-                        imageCache.fetchImage(for: .init(voice: voice))
+                    for speaker in fetchedSpeakers {
+                        imageCache.fetchImage(for: .init(speaker: speaker))
                     }
                     lastFetchedPage = currentPage
                 }
@@ -71,9 +71,9 @@ class VoicesPageViewModel: ObservableObject {
         }
     }
 
-    private func fetchPage(_ page: Int) async throws -> VoiceArray {
-        let voices = try await dataSource.fetchVoices(page: page)
+    private func fetchPage(_ page: Int) async throws -> Speakers {
+        let speakers = try await dataSource.fetchSpeakers(page: page)
         print("***Fetched page: \(page) using \(String(describing: type(of: dataSource)))***")
-        return voices.uniqued()
+        return speakers.uniqued()
     }
 }
