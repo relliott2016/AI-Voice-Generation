@@ -1,5 +1,5 @@
 //
-//  VoicesDataSource.swift
+//  SpeakersDataSource.swift
 //  speakers
 //
 //  Created by Robbie Elliott on 2024-02-07.
@@ -8,9 +8,13 @@
 import Foundation
 import SwiftUI
 
-class VoicesDataSource: VoicesDataSourcing {
+protocol SpeakersDataSourcing {
+    func fetchSpeakers(page: Int) async throws -> Speakers
+}
 
-    func fetchVoices(page: Int) async throws -> VoiceArray {
+class SpeakersDataSource: SpeakersDataSourcing {
+
+    func fetchSpeakers(page: Int) async throws -> Speakers {
         // Base URL and query items
         let baseURL = GlobalConstants.URLs.speakers
         let queryItems = [
@@ -35,11 +39,15 @@ class VoicesDataSource: VoicesDataSourcing {
         request.addValue("application/json", forHTTPHeaderField: "accept")
 
         // Fetch data
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let voices = try JSONDecoder().decode(Voices.self, from: data)
+        do {
+            let (data, _) = try await URLSession.shared.data(for: request)
+            let speakers = try JSONDecoder().decode(SpeakerResponse.self, from: data)
 
-        print("********* Page: \(voices.page) *********")
-
-        return voices.data
+            print("********* Page: \(speakers.page) *********")
+            return speakers.data
+        } catch {
+            print(String(describing: error))
+            return Speakers()
+        }
     }
 }

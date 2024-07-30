@@ -24,5 +24,5 @@ struct CenteredTitleView: View {
 }
 
 #Preview {
-    CenteredTitleView(title: Voice.mock.displayName)
+    CenteredTitleView(title: Speaker.mock.displayName)
 }

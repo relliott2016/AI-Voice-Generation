@@ -1,5 +1,5 @@
 //
-//  VoiceInfoView.swift
+//  SpeakerInfoView.swift
 //  LovoAIVoices
 //
 //  Created by Robbie Elliott on 2024-02-09.
@@ -8,17 +8,17 @@
 import SwiftUI
 
 @MainActor
-struct VoiceInfoView: View {
+struct SpeakerInfoView: View {
     @State private var showAudioVisualizer = false
 
     var audioVisualizer: AudioVisualizer
     var playVoiceImage: UIImage? = "▶️".textToImage()
     var playingVoiceImage: UIImage? = "⏸️".textToImage()
-    let viewModel: VoiceViewModel
+    let viewModel: SpeakerViewModel
     private let locale: Locale = .current
     private let audioStreamer = AudioStreamer()
 
-    init(viewModel: VoiceViewModel) {
+    init(viewModel: SpeakerViewModel) {
         self.viewModel = viewModel
         self.audioVisualizer = AudioVisualizer()
     }
@@ -122,5 +122,5 @@ struct VoiceInfoView: View {
 }
 
 #Preview {
-    VoiceInfoView(viewModel: .init(voice: Voice.mock))
+    SpeakerInfoView(viewModel: .init(speaker: Speaker.mock))
 }

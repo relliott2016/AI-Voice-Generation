@@ -1,5 +1,5 @@
 //
-//  VoiceListCell.swift
+//  SpeakersListItemView.swift
 //  LovoAIVoices
 //
 //  Created by Robbie Elliott on 2024-02-08.
@@ -8,15 +8,15 @@
 import SwiftUI
 
 @MainActor
-struct VoiceListItemView: View {
-    @ObservedObject var viewModel: VoiceViewModel
+struct SpeakersListItemView: View {
+    @ObservedObject var viewModel: SpeakerViewModel
     @ObservedObject var imageCache: ImageCache
     private let locale: Locale = .current
 
     var body: some View {
         ZStack(alignment: .bottom) {
             Group {
-                if let personImage = imageCache.getImage(for: viewModel.voiceId) {
+                if let personImage = imageCache.getImage(for: viewModel.speakerId) {
                     StyledImageView(image: personImage)
                 } else {
                     ProgressView()
@@ -64,7 +64,7 @@ struct VoiceListItemView: View {
 struct VoiceListItemView_Previews: PreviewProvider {
     static var previews: some View {
         let imageCache = ImageCache()
-        VoiceListItemView(viewModel: .init(voice: .mock), imageCache: imageCache)
+        SpeakersListItemView(viewModel: .init(speaker: .mock), imageCache: imageCache)
             .previewLayout(.sizeThatFits)
     }
 }

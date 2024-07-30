@@ -11,11 +11,11 @@ import SwiftUI
 class MockImageCache: ImageCaching {
     var imageViews: [String : Image] = [:]
 
-    func fetchImage(for viewModel: VoiceViewModel) {
-        imageViews[viewModel.voiceId] = GlobalConstants.Images.placeholder
+    func fetchImage(for viewModel: SpeakerViewModel) {
+        imageViews[viewModel.speakerId] = GlobalConstants.Images.placeholder
     }
 
-    func getImage(for voiceId: String) -> Image? {
-        return imageViews[voiceId]
+    func getImage(for speakerId: String) -> Image? {
+        return imageViews[speakerId]
     }
 }
