@@ -1,5 +1,5 @@
 //
-//  VoicesPageViewModel.swift
+//  SpeakersPageViewModel.swift
 //  speakers
 //
 //  Created by Robbie Elliott on 2024-02-07.

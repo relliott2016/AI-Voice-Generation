@@ -1,5 +1,5 @@
 //
-//  LovoAIVoicesTests.swift
+//  SpeakerViewModelTests.swift
 //  LovoAIVoicesTests
 //
 //  Created by Robbie Elliott on 2024-07-25.
