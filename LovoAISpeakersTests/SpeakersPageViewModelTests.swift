@@ -1,13 +1,6 @@
 //
 //  SpeakersPageViewModelTests.swift
-//  LovoAIVoicesTests
-//
-//  Created by Robbie Elliott on 2024-07-25.
-//
-
-//
-//  VoicesPageViewModelTests.swift
-//  LovoAIVoicesTests
+//  LovoAISpeakersTests
 //
 //  Created by Robbie Elliott on 2024-07-25.
 //

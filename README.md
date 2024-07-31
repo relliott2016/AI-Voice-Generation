@@ -1,12 +1,12 @@
-## VOICES
+## SPEAKERS
 
-A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny AI API. This app showcases the ability to produce AI-generated voices, in locale specific languages, for use within various contexts including corporate training, education, audiobooks, YouTube, podcasts, social media, IVR customer support, advertisements and more.
+A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny AI speakers API. This app showcases the ability to produce AI-generated speakers, in locale specific languages, for use within various contexts including corporate training, education, audiobooks, YouTube, podcasts, social media, IVR customer support, advertisements and more.
 
 ## Features
 
 - Integrates with the LOVO Genny AI speakers API.
-- Real-time AI voice generation and playback.
-- Display voice associated gender, locale, and image.
+- Real-time AI speaker associated voice generation and playback.
+- Display speaker associated Name, Gender, Age Range, Country, Language and image.
 - Paginated scrolling.
 
 ## Installation / Setup
