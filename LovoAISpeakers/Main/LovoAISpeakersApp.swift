@@ -1,6 +1,6 @@
 //
-//  LovoAIVoicesApp.swift
-//  LovoAIVoices
+//  LovoAISpeakersApp.swift
+//  LovoAISpeakers
 //
 //  Created by Robbie Elliott on 2024-02-08.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct LovoAIVoicesApp: App {
+struct LovoAISpeakersApp: App {
     var body: some Scene {
         WindowGroup {
             if isNotTesting {

@@ -1,6 +1,6 @@
 //
 //  ImageCache.swift
-//  LovoAIVoices
+//  LovoAISpeakers
 //
 //  Created by Robbie Elliott on 2024-07-19.
 //
@@ -17,7 +17,7 @@ protocol ImageCaching {
 class ImageCache: ImageCaching, ObservableObject {
     @Published var imageViews: [String: Image] = [:]
     private var cache = NSCache<NSString, UIImage>()
-    private let imageFetchQueue = DispatchQueue(label: "com.LovoAIVoices", attributes: .concurrent)
+    private let imageFetchQueue = DispatchQueue(label: "com.LovoAISpeakers", attributes: .concurrent)
 
     func fetchImage(for viewModel: SpeakerViewModel) {
         guard let url = viewModel.imageURL, imageViews[viewModel.speakerId] == nil else { return }

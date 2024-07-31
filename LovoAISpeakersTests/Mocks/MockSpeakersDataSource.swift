@@ -1,6 +1,6 @@
 //
 //  MockSpeakersDataSource.swift
-//  LovoAIVoicesTests
+//  LovoAISpeakersTests
 //
 //  Created by Robbie Elliott on 2024-07-25.
 //

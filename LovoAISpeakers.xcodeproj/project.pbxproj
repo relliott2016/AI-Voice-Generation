@@ -18,7 +18,7 @@
 		F8034B5B2C5A963400209A72 /* SpeakersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C72B74FA1900F8FDF7 /* SpeakersDataSource.swift */; };
 		F8034B5C2C5A964C00209A72 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC52C04E00B00C2360D /* GlobalConstants.swift */; };
 		F8034B5D2C5A966300209A72 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC92C0669ED00C2360D /* Config.swift */; };
-		F809599B2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */; };
+		F809599B2B74F95D00F8FDF7 /* LovoAISpeakersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599A2B74F95D00F8FDF7 /* LovoAISpeakersApp.swift */; };
 		F809599D2B74F95D00F8FDF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599C2B74F95D00F8FDF7 /* ContentView.swift */; };
 		F809599F2B74F95E00F8FDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F809599E2B74F95E00F8FDF7 /* Assets.xcassets */; };
 		F80959A22B74F95E00F8FDF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */; };
@@ -59,7 +59,7 @@
 		F8034B502C5A934D00209A72 /* SpeakersPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersPageViewModelTests.swift; sourceTree = "<group>"; };
 		F8034B512C5A934D00209A72 /* SpeakerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModelTests.swift; sourceTree = "<group>"; };
 		F80959972B74F95D00F8FDF7 /* LovoAISpeakers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovoAISpeakers.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesApp.swift; sourceTree = "<group>"; };
+		F809599A2B74F95D00F8FDF7 /* LovoAISpeakersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAISpeakersApp.swift; sourceTree = "<group>"; };
 		F809599C2B74F95D00F8FDF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F809599E2B74F95E00F8FDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F80959A12B74F95E00F8FDF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 		F821FCC42C04DF7900C2360D /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */,
+				F809599A2B74F95D00F8FDF7 /* LovoAISpeakersApp.swift */,
 				F821FCC52C04E00B00C2360D /* GlobalConstants.swift */,
 				F809599E2B74F95E00F8FDF7 /* Assets.xcassets */,
 			);
@@ -265,7 +265,7 @@
 			dependencies = (
 			);
 			name = LovoAISpeakers;
-			productName = LovoAIVoices;
+			productName = LovoAISpeakers;
 			productReference = F80959972B74F95D00F8FDF7 /* LovoAISpeakers.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -288,7 +288,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAIVoices" */;
+			buildConfigurationList = F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAISpeakers" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -368,7 +368,7 @@
 				F80959C92B74FA1900F8FDF7 /* SpeakersPageViewModel.swift in Sources */,
 				F8DD65FE2B7A457600BAEBDB /* Locale + extensions.swift in Sources */,
 				F80959E22B757E1100F8FDF7 /* String + extensions.swift in Sources */,
-				F809599B2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift in Sources */,
+				F809599B2B74F95D00F8FDF7 /* LovoAISpeakersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +563,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoices;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAISpeakers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -594,7 +594,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAIVoices;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAISpeakers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAIVoices" */ = {
+		F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAISpeakers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F80959B92B74F95E00F8FDF7 /* Debug */,

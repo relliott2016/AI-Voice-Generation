@@ -1,6 +1,6 @@
 //
 //  SpeakersListView.swift
-//  LovoAIVoices
+//  LovoAISpeakers
 //
 //  Created by Robbie Elliott on 2024-02-08.
 //

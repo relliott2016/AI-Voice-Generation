@@ -18,7 +18,7 @@
                BlueprintIdentifier = "F80959962B74F95D00F8FDF7"
                BuildableName = "LovoAISpeakers.app"
                BlueprintName = "LovoAISpeakers"
-               ReferencedContainer = "container:LovoAIVoices.xcodeproj">
+               ReferencedContainer = "container:LovoAISpeakers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -38,7 +38,7 @@
                BlueprintIdentifier = "F8034B432C5A930300209A72"
                BuildableName = "LovoAISpeakersTests.xctest"
                BlueprintName = "LovoAISpeakersTests"
-               ReferencedContainer = "container:LovoAIVoices.xcodeproj">
+               ReferencedContainer = "container:LovoAISpeakers.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -60,7 +60,7 @@
             BlueprintIdentifier = "F80959962B74F95D00F8FDF7"
             BuildableName = "LovoAISpeakers.app"
             BlueprintName = "LovoAISpeakers"
-            ReferencedContainer = "container:LovoAIVoices.xcodeproj">
+            ReferencedContainer = "container:LovoAISpeakers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "F80959962B74F95D00F8FDF7"
             BuildableName = "LovoAISpeakers.app"
             BlueprintName = "LovoAISpeakers"
-            ReferencedContainer = "container:LovoAIVoices.xcodeproj">
+            ReferencedContainer = "container:LovoAISpeakers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
