@@ -58,7 +58,7 @@ class SpeakersPageViewModel: ObservableObject {
                     speakers += fetchedSpeakers
                     speakers = speakers.uniqued()
 
-                    // Preload images for the new voices
+                    // Preload images for the new speakers
                     for speaker in fetchedSpeakers {
                         imageCache.fetchImage(for: .init(speaker: speaker))
                     }

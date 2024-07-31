@@ -4,24 +4,35 @@ A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny
 
 ## Features
 
-- Integrates with the LOVO Genny AI speakers API.
-- Real-time AI speaker associated voice generation and playback.
-- Display speaker associated Name, Gender, Age Range, Country, Language and image.
-- Paginated scrolling.
+	•	Integrates with the LOVO Genny AI speakers API.
+	•	Real-time AI speaker associated voice generation and playback.
+	•	Display speaker associated Name, Gender, Age Range, Country, Language and image.
+	•	Paginated scrolling.
 
-## Installation / Setup
+## Prerequisites
+
+	•	Xcode 16 (beta) or higher installed on your machine. This is necessary as the test cases use the Swift Testing framework introduced in this version.
+	•	A free API key from the [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
+
+## Setup Instructions
 
 1. Clone the repository:
    ```sh
    git clone https://github.com/relliott2016/AI-Voice-Generation.
 
-2. Obtain a free API key from [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
+2. Obtain a free API key:
+ 	•	Visit the [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
 
-3. Substitute "LOVO_GENNY_API_KEY" placeholder value "ADD_LOVO_GENNY_API_KEY_HERE" with your API key in the Xcode LovoAIVoices target Info tab.
+3. Configure the Xcode Project:
+	•	Open the project in Xcode.
+	•	Substitute the "LOVO_GENNY_API_KEY" placeholder value "ADD_LOVO_GENNY_API_KEY_HERE" with your API key in the Xcode LovoAIVoices target Info tab.
+	•	Modify the Xcode target LovoAIVoices Signing & Capabilities tab to include your own team and Bundle Identifier (if you are running on your device).
    
-4. Modify the Xcode target LovoAIVoices Signing & Capabilities tab to include your own team and Bundle Identifier (if your running on your device)
+4. Build and Run:
+	•	Build and run the app in the simulator or on your device.
 
-5. Build and run the app in the simulator or on your device.
+## Testing
+	•	The test cases in this project use the Swift Testing framework, which is available in Xcode 16 (beta) or higher.
 
 ## License
 
