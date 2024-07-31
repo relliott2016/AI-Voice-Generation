@@ -15,7 +15,7 @@
 import Testing
 import Foundation
 import SwiftUI
-@testable import LovoAIVoices
+@testable import LovoAISpeakers
 
 struct SpeakersPageViewModelTests {
 
