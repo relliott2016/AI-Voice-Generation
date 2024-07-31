@@ -12,6 +12,7 @@ class SpeakerViewModel: ObservableObject {
     var name: String { speaker.displayName }
     var locale: String { speaker.locale }
     var gender: String { speaker.gender.rawValue }
+    var ageRange: String { speaker.ageRange?.displayValue ?? "N/A" }
     var speakerId: String { speaker.id }
     var speakerType: String { speaker.speakerType.rawValue }
     var sampleTTSURL: String? { speaker.speakerStyles[0].sampleTTSURL }

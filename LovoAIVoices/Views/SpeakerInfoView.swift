@@ -45,10 +45,10 @@ struct SpeakerInfoView: View {
                 }
 
                 HStack {
-                    Text("Type:")
+                    Text("Age Range:")
                         .font(.title3)
                     Spacer()
-                    Text(viewModel.speakerType.capitalized)
+                    Text(viewModel.ageRange)
                         .font(.title3)
                 }
                 

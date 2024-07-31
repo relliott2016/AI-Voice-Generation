@@ -28,8 +28,7 @@ class SpeakersDataSource: SpeakersDataSourcing {
         components?.queryItems = queryItems
 
         guard let url = components?.url else {
-            print("Error: Invalid URL components.")
-            return []
+            throw URLError(.badURL, userInfo: [NSURLErrorFailingURLErrorKey: baseURL])
         }
 
         // Create URLRequest
@@ -46,8 +45,8 @@ class SpeakersDataSource: SpeakersDataSourcing {
             print("********* Page: \(speakers.page) *********")
             return speakers.data
         } catch {
-            print(String(describing: error))
-            return Speakers()
+            print("Error fetching data: \(error.localizedDescription)")
+            throw error
         }
     }
 }
