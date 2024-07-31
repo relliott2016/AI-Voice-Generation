@@ -1,18 +1,19 @@
 ## SPEAKERS
 
-A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny AI speakers API. This app showcases the ability to produce AI-generated speakers, in locale specific languages, for use within various contexts including corporate training, education, audiobooks, YouTube, podcasts, social media, IVR customer support, advertisements and more.
+A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny AI speakers API. This app showcases the ability to produce AI-generated speakers, in locale specific languages, for use within
+various contexts including corporate training, education, audiobooks, YouTube, podcasts, social media, IVR customer support, advertisements and more.
 
 ## Features
 
-	•	Integrates with the LOVO Genny AI speakers API.
-	•	Real-time AI speaker associated voice generation and playback.
-	•	Display speaker associated Name, Gender, Age Range, Country, Language and image.
-	•	Paginated scrolling.
+- Integrates with the LOVO Genny AI speakers API.
+- Real-time AI speaker associated voice generation and playback.
+- Display speaker associated Name, Gender, Age Range, Country, Language and Image.
+- Paginated scrolling.
 
 ## Prerequisites
 
-	•	Xcode 16 (beta) or higher installed on your machine. This is necessary as the test cases use the Swift Testing framework introduced in this version.
-	•	A free API key from the [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
+- Xcode 16 (beta) or higher installed on your machine. This is necessary as the test cases use the Swift Testing framework introduced in this version.
+- A free API key from the [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started)
 
 ## Setup Instructions
 
@@ -21,18 +22,19 @@ A Swift/SwiftUI application that demonstrates the capabilities of the LOVO Genny
    git clone https://github.com/relliott2016/AI-Voice-Generation.
 
 2. Obtain a free API key:
- 	•	Visit the [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
-
-3. Configure the Xcode Project:
-	•	Open the project in Xcode.
-	•	Substitute the "LOVO_GENNY_API_KEY" placeholder value "ADD_LOVO_GENNY_API_KEY_HERE" with your API key in the Xcode LovoAIVoices target Info tab.
-	•	Modify the Xcode target LovoAIVoices Signing & Capabilities tab to include your own team and Bundle Identifier (if you are running on your device).
    
-4. Build and Run:
-	•	Build and run the app in the simulator or on your device.
+- Visit the [LOVO Developer Dashboard](https://docs.genny.lovo.ai/reference/intro/getting-started).
+
+4. Configure the Xcode Project:
+- Open the project in Xcode.
+- Substitute the "LOVO_GENNY_API_KEY" placeholder value "ADD_LOVO_GENNY_API_KEY_HERE" with your API key in the Xcode LovoAISpeakers target Info tab.
+- Modify the Xcode target LovoAISpeakers Signing & Capabilities tab to include your own team and Bundle Identifier (if you are running on your device).
+   
+5. Build and Run:
+- Build and run the app in the simulator or on your device.
 
 ## Testing
-	•	The test cases in this project use the Swift Testing framework, which is available in Xcode 16 (beta) or higher.
+- The test cases in this project use the Swift Testing framework, which is available in Xcode 16 (beta) or higher.
 
 ## License
 
