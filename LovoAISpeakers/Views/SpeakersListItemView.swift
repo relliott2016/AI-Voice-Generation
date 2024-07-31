@@ -61,7 +61,7 @@ struct SpeakersListItemView: View {
     }
 }
 
-struct VoiceListItemView_Previews: PreviewProvider {
+struct SpeakersListItemView_Previews: PreviewProvider {
     static var previews: some View {
         let imageCache = ImageCache()
         SpeakersListItemView(viewModel: .init(speaker: .mock), imageCache: imageCache)
