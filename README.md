@@ -5,7 +5,7 @@ various contexts including corporate training, education, audiobooks, YouTube, p
 
 ## Features
 
-- Integrates with the LOVO Genny AI speakers API.
+- Consumes the LOVO Genny AI speakers API.
 - Real-time AI speaker associated voice generation and playback.
 - Display speaker associated Name, Gender, Age Range, Country, Language and Image.
 - Paginated scrolling.
