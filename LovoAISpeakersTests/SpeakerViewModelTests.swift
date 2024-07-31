@@ -6,7 +6,7 @@
 //
 
 import Testing
-@testable import LovoAIVoices
+@testable import LovoAISpeakers
 
 struct SpeakerViewModelTests {
 

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8034B532C5A934D00209A72 /* SpeakersPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8034B502C5A934D00209A72 /* SpeakersPageViewModelTests.swift */; };
+		F8034B542C5A934D00209A72 /* SpeakerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8034B512C5A934D00209A72 /* SpeakerViewModelTests.swift */; };
+		F8034B552C5A934D00209A72 /* MockImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8034B4D2C5A934D00209A72 /* MockImageCache.swift */; };
+		F8034B562C5A934D00209A72 /* MockSpeakersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8034B4E2C5A934D00209A72 /* MockSpeakersDataSource.swift */; };
+		F8034B572C5A95BB00209A72 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89D363B2C4A5B56002FC7E4 /* ImageCache.swift */; };
+		F8034B582C5A95DC00209A72 /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D52B750A4700F8FDF7 /* SpeakerViewModel.swift */; };
+		F8034B592C5A95E600209A72 /* SpeakersPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C62B74FA1900F8FDF7 /* SpeakersPageViewModel.swift */; };
+		F8034B5A2C5A960900209A72 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D32B7504BD00F8FDF7 /* Speaker.swift */; };
+		F8034B5B2C5A963400209A72 /* SpeakersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C72B74FA1900F8FDF7 /* SpeakersDataSource.swift */; };
+		F8034B5C2C5A964C00209A72 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC52C04E00B00C2360D /* GlobalConstants.swift */; };
+		F8034B5D2C5A966300209A72 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC92C0669ED00C2360D /* Config.swift */; };
 		F809599B2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */; };
 		F809599D2B74F95D00F8FDF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809599C2B74F95D00F8FDF7 /* ContentView.swift */; };
 		F809599F2B74F95E00F8FDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F809599E2B74F95E00F8FDF7 /* Assets.xcassets */; };
@@ -25,35 +36,29 @@
 		F80959ED2B7659FF00F8FDF7 /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959EC2B7659FF00F8FDF7 /* AudioVisualizer.swift */; };
 		F821FCC62C04E00B00C2360D /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC52C04E00B00C2360D /* GlobalConstants.swift */; };
 		F821FCCA2C0669ED00C2360D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC92C0669ED00C2360D /* Config.swift */; };
-		F85CD4BD2C52B8550006CCEF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89D363B2C4A5B56002FC7E4 /* ImageCache.swift */; };
-		F85CD4CB2C57EBA20006CCEF /* SpeakersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C72B74FA1900F8FDF7 /* SpeakersDataSource.swift */; };
-		F85CD4CC2C57F2410006CCEF /* SpeakersPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959C62B74FA1900F8FDF7 /* SpeakersPageViewModel.swift */; };
-		F85CD4CD2C57F97F0006CCEF /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC52C04E00B00C2360D /* GlobalConstants.swift */; };
-		F85CD4CE2C57F9B70006CCEF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F821FCC92C0669ED00C2360D /* Config.swift */; };
 		F88C62D72C3DCEF700DFEA0D /* CenteredTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88C62D62C3DCEF700DFEA0D /* CenteredTitleView.swift */; };
-		F89478B72C529ECE00FFE6FB /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D52B750A4700F8FDF7 /* SpeakerViewModel.swift */; };
-		F89478B82C52A0C800FFE6FB /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D32B7504BD00F8FDF7 /* Speaker.swift */; };
 		F89D363A2C4A5A6E002FC7E4 /* StyledImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89D36392C4A5A6E002FC7E4 /* StyledImageView.swift */; };
 		F89D363C2C4A5B56002FC7E4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89D363B2C4A5B56002FC7E4 /* ImageCache.swift */; };
-		F8B0A9972C5A72D90083AF61 /* MockImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A9912C5A72D90083AF61 /* MockImageCache.swift */; };
-		F8B0A9982C5A72D90083AF61 /* SpeakersPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A9942C5A72D90083AF61 /* SpeakersPageViewModelTests.swift */; };
-		F8B0A9992C5A72D90083AF61 /* MockSpeakersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A9922C5A72D90083AF61 /* MockSpeakersDataSource.swift */; };
-		F8B0A99A2C5A72D90083AF61 /* SpeakerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B0A9952C5A72D90083AF61 /* SpeakerViewModelTests.swift */; };
 		F8DD65FE2B7A457600BAEBDB /* Locale + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DD65FD2B7A457600BAEBDB /* Locale + extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F8A517D12C52903900952C65 /* PBXContainerItemProxy */ = {
+		F8034B482C5A930300209A72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F809598F2B74F95D00F8FDF7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F80959962B74F95D00F8FDF7;
-			remoteInfo = LovoAIVoices;
+			remoteInfo = LovoAISpeakers;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F80959972B74F95D00F8FDF7 /* LovoAIVoices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovoAIVoices.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8034B442C5A930300209A72 /* LovoAISpeakersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovoAISpeakersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8034B4D2C5A934D00209A72 /* MockImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageCache.swift; sourceTree = "<group>"; };
+		F8034B4E2C5A934D00209A72 /* MockSpeakersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpeakersDataSource.swift; sourceTree = "<group>"; };
+		F8034B502C5A934D00209A72 /* SpeakersPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersPageViewModelTests.swift; sourceTree = "<group>"; };
+		F8034B512C5A934D00209A72 /* SpeakerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModelTests.swift; sourceTree = "<group>"; };
+		F80959972B74F95D00F8FDF7 /* LovoAISpeakers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovoAISpeakers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F809599A2B74F95D00F8FDF7 /* LovoAIVoicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovoAIVoicesApp.swift; sourceTree = "<group>"; };
 		F809599C2B74F95D00F8FDF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F809599E2B74F95E00F8FDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,23 +80,18 @@
 		F88C62D62C3DCEF700DFEA0D /* CenteredTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredTitleView.swift; sourceTree = "<group>"; };
 		F89D36392C4A5A6E002FC7E4 /* StyledImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledImageView.swift; sourceTree = "<group>"; };
 		F89D363B2C4A5B56002FC7E4 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		F8A517CD2C52903900952C65 /* LovoAISpeakersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LovoAISpeakersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8B0A9912C5A72D90083AF61 /* MockImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageCache.swift; sourceTree = "<group>"; };
-		F8B0A9922C5A72D90083AF61 /* MockSpeakersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSpeakersDataSource.swift; sourceTree = "<group>"; };
-		F8B0A9942C5A72D90083AF61 /* SpeakersPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersPageViewModelTests.swift; sourceTree = "<group>"; };
-		F8B0A9952C5A72D90083AF61 /* SpeakerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModelTests.swift; sourceTree = "<group>"; };
 		F8DD65FD2B7A457600BAEBDB /* Locale + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale + extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F80959942B74F95D00F8FDF7 /* Frameworks */ = {
+		F8034B412C5A930300209A72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A517CA2C52903900952C65 /* Frameworks */ = {
+		F80959942B74F95D00F8FDF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,25 +101,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8034B4F2C5A934D00209A72 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F8034B4D2C5A934D00209A72 /* MockImageCache.swift */,
+				F8034B4E2C5A934D00209A72 /* MockSpeakersDataSource.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F8034B522C5A934D00209A72 /* LovoAISpeakersTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8034B4F2C5A934D00209A72 /* Mocks */,
+				F8034B502C5A934D00209A72 /* SpeakersPageViewModelTests.swift */,
+				F8034B512C5A934D00209A72 /* SpeakerViewModelTests.swift */,
+			);
+			path = LovoAISpeakersTests;
+			sourceTree = "<group>";
+		};
 		F809598E2B74F95D00F8FDF7 = {
 			isa = PBXGroup;
 			children = (
-				F80959992B74F95D00F8FDF7 /* LovoAIVoices */,
+				F80959992B74F95D00F8FDF7 /* LovoAISpeakers */,
 				F80959982B74F95D00F8FDF7 /* Products */,
-				F8B0A9962C5A72D90083AF61 /* LovoAISpeakersTests */,
+				F8034B522C5A934D00209A72 /* LovoAISpeakersTests */,
 			);
 			sourceTree = "<group>";
 		};
 		F80959982B74F95D00F8FDF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F80959972B74F95D00F8FDF7 /* LovoAIVoices.app */,
-				F8A517CD2C52903900952C65 /* LovoAISpeakersTests.xctest */,
+				F80959972B74F95D00F8FDF7 /* LovoAISpeakers.app */,
+				F8034B442C5A930300209A72 /* LovoAISpeakersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F80959992B74F95D00F8FDF7 /* LovoAIVoices */ = {
+		F80959992B74F95D00F8FDF7 /* LovoAISpeakers */ = {
 			isa = PBXGroup;
 			children = (
 				F821FCC42C04DF7900C2360D /* Main */,
@@ -130,7 +149,7 @@
 				F80959DB2B75253100F8FDF7 /* Helpers */,
 				F80959A02B74F95E00F8FDF7 /* Preview Content */,
 			);
-			path = LovoAIVoices;
+			path = LovoAISpeakers;
 			sourceTree = "<group>";
 		};
 		F80959A02B74F95E00F8FDF7 /* Preview Content */ = {
@@ -212,31 +231,30 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		F8B0A9932C5A72D90083AF61 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				F8B0A9912C5A72D90083AF61 /* MockImageCache.swift */,
-				F8B0A9922C5A72D90083AF61 /* MockSpeakersDataSource.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		F8B0A9962C5A72D90083AF61 /* LovoAISpeakersTests */ = {
-			isa = PBXGroup;
-			children = (
-				F8B0A9932C5A72D90083AF61 /* Mocks */,
-				F8B0A9942C5A72D90083AF61 /* SpeakersPageViewModelTests.swift */,
-				F8B0A9952C5A72D90083AF61 /* SpeakerViewModelTests.swift */,
-			);
-			path = LovoAISpeakersTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F80959962B74F95D00F8FDF7 /* LovoAIVoices */ = {
+		F8034B432C5A930300209A72 /* LovoAISpeakersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F80959BB2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoices" */;
+			buildConfigurationList = F8034B4A2C5A930300209A72 /* Build configuration list for PBXNativeTarget "LovoAISpeakersTests" */;
+			buildPhases = (
+				F8034B402C5A930300209A72 /* Sources */,
+				F8034B412C5A930300209A72 /* Frameworks */,
+				F8034B422C5A930300209A72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8034B492C5A930300209A72 /* PBXTargetDependency */,
+			);
+			name = LovoAISpeakersTests;
+			productName = LovoAISpeakersTests;
+			productReference = F8034B442C5A930300209A72 /* LovoAISpeakersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F80959962B74F95D00F8FDF7 /* LovoAISpeakers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80959BB2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAISpeakers" */;
 			buildPhases = (
 				F80959932B74F95D00F8FDF7 /* Sources */,
 				F80959942B74F95D00F8FDF7 /* Frameworks */,
@@ -246,28 +264,10 @@
 			);
 			dependencies = (
 			);
-			name = LovoAIVoices;
+			name = LovoAISpeakers;
 			productName = LovoAIVoices;
-			productReference = F80959972B74F95D00F8FDF7 /* LovoAIVoices.app */;
+			productReference = F80959972B74F95D00F8FDF7 /* LovoAISpeakers.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F8A517CC2C52903900952C65 /* LovoAISpeakersTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8A517D52C52903900952C65 /* Build configuration list for PBXNativeTarget "LovoAISpeakersTests" */;
-			buildPhases = (
-				F8A517C92C52903900952C65 /* Sources */,
-				F8A517CA2C52903900952C65 /* Frameworks */,
-				F8A517CB2C52903900952C65 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F8A517D22C52903900952C65 /* PBXTargetDependency */,
-			);
-			name = LovoAISpeakersTests;
-			productName = LovoAISpeakersTests;
-			productReference = F8A517CD2C52903900952C65 /* LovoAISpeakersTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -279,12 +279,12 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					F80959962B74F95D00F8FDF7 = {
-						CreatedOnToolsVersion = 15.2;
-					};
-					F8A517CC2C52903900952C65 = {
+					F8034B432C5A930300209A72 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = F80959962B74F95D00F8FDF7;
+					};
+					F80959962B74F95D00F8FDF7 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -301,13 +301,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F80959962B74F95D00F8FDF7 /* LovoAIVoices */,
-				F8A517CC2C52903900952C65 /* LovoAISpeakersTests */,
+				F80959962B74F95D00F8FDF7 /* LovoAISpeakers */,
+				F8034B432C5A930300209A72 /* LovoAISpeakersTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F8034B422C5A930300209A72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F80959952B74F95D00F8FDF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,16 +324,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A517CB2C52903900952C65 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F8034B402C5A930300209A72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8034B5B2C5A963400209A72 /* SpeakersDataSource.swift in Sources */,
+				F8034B572C5A95BB00209A72 /* ImageCache.swift in Sources */,
+				F8034B5C2C5A964C00209A72 /* GlobalConstants.swift in Sources */,
+				F8034B532C5A934D00209A72 /* SpeakersPageViewModelTests.swift in Sources */,
+				F8034B5D2C5A966300209A72 /* Config.swift in Sources */,
+				F8034B542C5A934D00209A72 /* SpeakerViewModelTests.swift in Sources */,
+				F8034B5A2C5A960900209A72 /* Speaker.swift in Sources */,
+				F8034B592C5A95E600209A72 /* SpeakersPageViewModel.swift in Sources */,
+				F8034B552C5A934D00209A72 /* MockImageCache.swift in Sources */,
+				F8034B582C5A95DC00209A72 /* SpeakerViewModel.swift in Sources */,
+				F8034B562C5A934D00209A72 /* MockSpeakersDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F80959932B74F95D00F8FDF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,35 +372,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A517C92C52903900952C65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F89478B82C52A0C800FFE6FB /* Speaker.swift in Sources */,
-				F89478B72C529ECE00FFE6FB /* SpeakerViewModel.swift in Sources */,
-				F85CD4CC2C57F2410006CCEF /* SpeakersPageViewModel.swift in Sources */,
-				F85CD4CE2C57F9B70006CCEF /* Config.swift in Sources */,
-				F8B0A9972C5A72D90083AF61 /* MockImageCache.swift in Sources */,
-				F8B0A9982C5A72D90083AF61 /* SpeakersPageViewModelTests.swift in Sources */,
-				F8B0A9992C5A72D90083AF61 /* MockSpeakersDataSource.swift in Sources */,
-				F8B0A99A2C5A72D90083AF61 /* SpeakerViewModelTests.swift in Sources */,
-				F85CD4BD2C52B8550006CCEF /* ImageCache.swift in Sources */,
-				F85CD4CD2C57F97F0006CCEF /* GlobalConstants.swift in Sources */,
-				F85CD4CB2C57EBA20006CCEF /* SpeakersDataSource.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F8A517D22C52903900952C65 /* PBXTargetDependency */ = {
+		F8034B492C5A930300209A72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F80959962B74F95D00F8FDF7 /* LovoAIVoices */;
-			targetProxy = F8A517D12C52903900952C65 /* PBXContainerItemProxy */;
+			target = F80959962B74F95D00F8FDF7 /* LovoAISpeakers */;
+			targetProxy = F8034B482C5A930300209A72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F8034B4B2C5A930300209A72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAISpeakersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LovoAISpeakers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LovoAISpeakers";
+			};
+			name = Debug;
+		};
+		F8034B4C2C5A930300209A72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UUKYGG9M85;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAISpeakersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LovoAISpeakers.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LovoAISpeakers";
+			};
+			name = Release;
+		};
 		F80959B92B74F95E00F8FDF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,11 +547,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LovoAIVoices/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LovoAISpeakers/Preview Content\"";
 				DEVELOPMENT_TEAM = UUKYGG9M85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = LovoAIVoices/Info.plist;
+				INFOPLIST_FILE = LovoAISpeakers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -540,11 +578,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"LovoAIVoices/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LovoAISpeakers/Preview Content\"";
 				DEVELOPMENT_TEAM = UUKYGG9M85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = LovoAIVoices/Info.plist;
+				INFOPLIST_FILE = LovoAISpeakers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -564,47 +602,18 @@
 			};
 			name = Release;
 		};
-		F8A517D32C52903900952C65 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UUKYGG9M85;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAISpeakersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LovoAIVoices.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LovoAIVoices";
-			};
-			name = Debug;
-		};
-		F8A517D42C52903900952C65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UUKYGG9M85;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Robbie.LovoAISpeakersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LovoAIVoices.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LovoAIVoices";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F8034B4A2C5A930300209A72 /* Build configuration list for PBXNativeTarget "LovoAISpeakersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8034B4B2C5A930300209A72 /* Debug */,
+				F8034B4C2C5A930300209A72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F80959922B74F95D00F8FDF7 /* Build configuration list for PBXProject "LovoAIVoices" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -614,20 +623,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F80959BB2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAIVoices" */ = {
+		F80959BB2B74F95E00F8FDF7 /* Build configuration list for PBXNativeTarget "LovoAISpeakers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F80959BC2B74F95E00F8FDF7 /* Debug */,
 				F80959BD2B74F95E00F8FDF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8A517D52C52903900952C65 /* Build configuration list for PBXNativeTarget "LovoAISpeakersTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8A517D32C52903900952C65 /* Debug */,
-				F8A517D42C52903900952C65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
