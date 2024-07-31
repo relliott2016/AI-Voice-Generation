@@ -19,7 +19,7 @@ various contexts including corporate training, education, audiobooks, YouTube, p
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/relliott2016/AI-Voice-Generation.
+   git clone https://github.com/relliott2016/AI-Speaker-Generation.git.
 
 2. Obtain a free API key:
    
