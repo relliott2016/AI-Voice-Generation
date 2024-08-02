@@ -7,7 +7,7 @@ various contexts including corporate training, education, audiobooks, YouTube, p
 
 - Consumes the LOVO Genny API speakers endpoint.
 - Real-time AI speaker associated voice generation and playback.
-- Displays speaker associated Name, Gender, Age Range, Country, Language and Image.
+- Displays speaker Name, Gender, Age Range, Country, Language and Image.
 - Levarages Image pre-fetching and Image caching to ensure a smooth and responsive user experience.
 - Paginated scrolling.
 
