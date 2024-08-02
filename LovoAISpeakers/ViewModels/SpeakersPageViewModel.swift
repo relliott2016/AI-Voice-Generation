@@ -8,8 +8,8 @@
 import Foundation
 
 class SpeakersPageViewModel: ObservableObject {
-    @Published var speakers: Speakers = []
-    @Published var imageCache:ImageCaching
+    @Published var speakers: [Speaker] = []
+    @Published var imageCache: ImageCaching
     private let dataSource: SpeakersDataSourcing
     var isLoading = false
     private var currentPage = 1
@@ -46,7 +46,7 @@ class SpeakersPageViewModel: ObservableObject {
         }
     }
 
-    func fetchNextpage() {
+    func fetchNextPage() {
         currentPage += 1
         guard !isLoading else { return }
         isLoading = true
@@ -71,7 +71,7 @@ class SpeakersPageViewModel: ObservableObject {
         }
     }
 
-    private func fetchPage(_ page: Int) async throws -> Speakers {
+    private func fetchPage(_ page: Int) async throws -> [Speaker] {
         let speakers = try await dataSource.fetchSpeakers(page: page)
         print("***Fetched page: \(page) using \(String(describing: type(of: dataSource)))***")
         return speakers.uniqued()

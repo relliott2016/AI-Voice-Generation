@@ -29,7 +29,7 @@ struct SpeakersListView: View {
                             SpeakersListItemView(viewModel: .init(speaker: speaker), imageCache: imageCache)
                                 .onAppear {
                                     if speaker == speakersPageViewModel.speakers.last && !speakersPageViewModel.isLoading {
-                                        speakersPageViewModel.fetchNextpage()
+                                        speakersPageViewModel.fetchNextPage()
                                     }
                                 }
                             Spacer()

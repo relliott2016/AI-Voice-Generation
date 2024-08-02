@@ -8,11 +8,10 @@
 import Foundation
 
 typealias Speaker = SpeakerData
-typealias Speakers = [Speaker]
 
 struct SpeakerResponse: Decodable {
     var totalCount, count, page, limit: Int
-    var data: Speakers
+    var data: [Speaker]
 }
 
 struct SpeakerData: Decodable, Identifiable {

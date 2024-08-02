@@ -8,9 +8,9 @@
 import Foundation
 
 class MockSpeakersDataSource: SpeakersDataSourcing {
-    var fetchSpeakersResults: [Int: Result<Speakers, Error>] = [:]
+    var fetchSpeakersResults: [Int: Result<[Speaker], Error>] = [:]
 
-    func fetchSpeakers(page: Int) async throws -> Speakers {
+    func fetchSpeakers(page: Int) async throws -> [Speaker] {
         switch fetchSpeakersResults[page] {
         case .success(let speakers):
             return speakers
