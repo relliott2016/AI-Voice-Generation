@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 protocol SpeakersDataSourcing {
-    func fetchSpeakers(page: Int) async throws -> Speakers
+    func fetchSpeakers(page: Int) async throws -> [Speaker]
 }
 
 class SpeakersDataSource: SpeakersDataSourcing {
 
-    func fetchSpeakers(page: Int) async throws -> Speakers {
+    func fetchSpeakers(page: Int) async throws -> [Speaker] {
         // Base URL and query items
         let baseURL = GlobalConstants.URLs.speakers
         let queryItems = [

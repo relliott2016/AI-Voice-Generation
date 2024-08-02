@@ -80,7 +80,7 @@ struct SpeakersPageViewModelTests {
         #expect(mockImageCache.imageViews.keys.contains("2"))
 
         // When fetching the next page
-        viewModel.fetchNextpage()
+        viewModel.fetchNextPage()
 
         // Delay to ensure async task completion
         try await Task.sleep(nanoseconds: 1_000_000_000) // 1 second delay
