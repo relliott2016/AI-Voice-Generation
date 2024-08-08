@@ -14,8 +14,9 @@ protocol ImageCaching {
     func getImage(for speakerId: String) -> Image?
 }
 
-class ImageCache: ImageCaching, ObservableObject {
-    @Published var imageViews: [String: Image] = [:]
+@Observable
+class ImageCache: ImageCaching {
+    var imageViews: [String: Image] = [:]
     private var cache = NSCache<NSString, UIImage>()
     private let imageFetchQueue = DispatchQueue(label: "com.LovoAISpeakers", attributes: .concurrent)
 

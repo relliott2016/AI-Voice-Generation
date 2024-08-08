@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SpeakerDetailView: View {
-    @ObservedObject var imageCache: ImageCache
+    @Environment(ImageCache.self) private var imageCache
     let viewModel: SpeakerViewModel
 
     var body: some View {
@@ -31,5 +31,5 @@ struct SpeakerDetailView: View {
 }
 
 #Preview {
-    SpeakerDetailView(imageCache: ImageCache(), viewModel: .init(speaker: Speaker.mock))
+    SpeakerDetailView(viewModel: .init(speaker: Speaker.mock))
 }

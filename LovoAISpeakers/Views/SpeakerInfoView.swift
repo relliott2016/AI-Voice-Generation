@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 struct SpeakerInfoView: View {
     @State private var showAudioVisualizer = false
 

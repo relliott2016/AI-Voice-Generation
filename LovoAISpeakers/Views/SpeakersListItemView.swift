@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-@MainActor
 struct SpeakersListItemView: View {
     @ObservedObject var viewModel: SpeakerViewModel
-    @ObservedObject var imageCache: ImageCache
+    @Environment(ImageCache.self) private var imageCache
     private let locale: Locale = .current
 
     var body: some View {
@@ -64,7 +63,7 @@ struct SpeakersListItemView: View {
 struct SpeakersListItemView_Previews: PreviewProvider {
     static var previews: some View {
         let imageCache = ImageCache()
-        SpeakersListItemView(viewModel: .init(speaker: .mock), imageCache: imageCache)
+        SpeakersListItemView(viewModel: .init(speaker: .mock))
             .previewLayout(.sizeThatFits)
     }
 }
