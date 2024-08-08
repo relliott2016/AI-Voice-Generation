@@ -9,16 +9,11 @@ import SwiftUI
 
 struct SpeakersListView: View {
     @Environment(ImageCache.self) private var imageCache
-    @StateObject private var speakersPageViewModel: SpeakersPageViewModel
-
-    init() {
-        let viewModel = SpeakersPageViewModel(speakersDataSource: SpeakersDataSource(), imageCache: ImageCache())
-        _speakersPageViewModel = StateObject(wrappedValue: viewModel)
-    }
+    @Environment(SpeakersPageViewModel.self) private var viewModel
 
     var body: some View {
         NavigationStack {
-            List(speakersPageViewModel.speakers) { speaker in
+            List(viewModel.speakers) { speaker in
                 NavigationLink(
                     destination: SpeakerDetailView(viewModel: .init(speaker: speaker)),
                     label: {
@@ -26,8 +21,8 @@ struct SpeakersListView: View {
                             Spacer()
                             SpeakersListItemView(viewModel: .init(speaker: speaker))
                                 .onAppear {
-                                    if speaker == speakersPageViewModel.speakers.last && !speakersPageViewModel.isLoading {
-                                        speakersPageViewModel.fetchNextPage()
+                                    if speaker == viewModel.speakers.last && !viewModel.isLoading {
+                                        viewModel.fetchNextPage()
                                     }
                                 }
                             Spacer()
@@ -40,8 +35,8 @@ struct SpeakersListView: View {
                 .padding(.leading)
             }
             .onAppear {
-                if speakersPageViewModel.speakers.isEmpty {
-                    speakersPageViewModel.fetchSpeakers()
+                if viewModel.speakers.isEmpty {
+                    viewModel.fetchSpeakers()
                 }
             }
             .listStyle(.plain)

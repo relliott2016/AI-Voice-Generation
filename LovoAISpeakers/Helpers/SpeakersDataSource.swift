@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 protocol SpeakersDataSourcing {
     func fetchSpeakers(page: Int) async throws -> [Speaker]
