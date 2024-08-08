@@ -7,9 +7,10 @@
 
 import Foundation
 
-class SpeakersPageViewModel: ObservableObject {
-    @Published var speakers: [Speaker] = []
-    @Published var imageCache: ImageCaching
+@Observable
+class SpeakersPageViewModel {
+    var speakers: [Speaker] = []
+    var imageCache: ImageCaching
     private let dataSource: SpeakersDataSourcing
     var isLoading = false
     private var currentPage = 1

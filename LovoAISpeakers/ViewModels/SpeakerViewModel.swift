@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SpeakerViewModel: ObservableObject {
+class SpeakerViewModel {
     var imageURL: URL? { speaker.imageUrl }
     var name: String { speaker.displayName }
     var locale: String { speaker.locale }
