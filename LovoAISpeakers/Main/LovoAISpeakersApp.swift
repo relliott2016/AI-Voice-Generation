@@ -11,7 +11,6 @@ import SwiftUI
 struct LovoAISpeakersApp: App {
     @State private var imageCache = ImageCache()
     
-
     var body: some Scene {
         WindowGroup {
             if isNotTesting {
