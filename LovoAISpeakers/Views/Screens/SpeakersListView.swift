@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct SpeakersListView: View {
-
-    @StateObject private var imageCache: ImageCache
+    @Environment(ImageCache.self) private var imageCache
     @StateObject private var speakersPageViewModel: SpeakersPageViewModel
 
     init() {
-        _imageCache = StateObject(wrappedValue: ImageCache())
         let viewModel = SpeakersPageViewModel(speakersDataSource: SpeakersDataSource(), imageCache: ImageCache())
         _speakersPageViewModel = StateObject(wrappedValue: viewModel)
     }
@@ -22,11 +20,11 @@ struct SpeakersListView: View {
         NavigationStack {
             List(speakersPageViewModel.speakers) { speaker in
                 NavigationLink(
-                    destination: SpeakerDetailView(imageCache: imageCache, viewModel: .init(speaker: speaker)),
+                    destination: SpeakerDetailView(viewModel: .init(speaker: speaker)),
                     label: {
                         HStack(spacing: 50) {
                             Spacer()
-                            SpeakersListItemView(viewModel: .init(speaker: speaker), imageCache: imageCache)
+                            SpeakersListItemView(viewModel: .init(speaker: speaker))
                                 .onAppear {
                                     if speaker == speakersPageViewModel.speakers.last && !speakersPageViewModel.isLoading {
                                         speakersPageViewModel.fetchNextPage()
