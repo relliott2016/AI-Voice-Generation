@@ -6,6 +6,7 @@
 //
 
 import Foundation
+//import Observation
 
 @Observable
 class SpeakersPageViewModel {
@@ -57,7 +58,6 @@ class SpeakersPageViewModel {
                 let fetchedSpeakers = try await fetchPage(currentPage)
                 await MainActor.run {
                     speakers += fetchedSpeakers
-                    speakers = speakers.uniqued()
 
                     // Preload images for the new speakers
                     for speaker in fetchedSpeakers {
@@ -75,6 +75,6 @@ class SpeakersPageViewModel {
     private func fetchPage(_ page: Int) async throws -> [Speaker] {
         let speakers = try await dataSource.fetchSpeakers(page: page)
         print("***Fetched page: \(page) using \(String(describing: type(of: dataSource)))***")
-        return speakers.uniqued()
+        return speakers
     }
 }

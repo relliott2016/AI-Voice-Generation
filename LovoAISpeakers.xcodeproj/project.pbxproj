@@ -29,7 +29,6 @@
 		F80959D62B750A4700F8FDF7 /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D52B750A4700F8FDF7 /* SpeakerViewModel.swift */; };
 		F80959D92B7519F600F8FDF7 /* SpeakersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959D82B7519F600F8FDF7 /* SpeakersListView.swift */; };
 		F80959DD2B75257F00F8FDF7 /* AudioStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */; };
-		F80959E02B7545F800F8FDF7 /* Array + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */; };
 		F80959E22B757E1100F8FDF7 /* String + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E12B757E1100F8FDF7 /* String + extensions.swift */; };
 		F80959E42B762FA700F8FDF7 /* SpeakerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E32B762FA700F8FDF7 /* SpeakerDetailView.swift */; };
 		F80959E92B763B8100F8FDF7 /* SpeakerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80959E82B763B8100F8FDF7 /* SpeakerInfoView.swift */; };
@@ -70,7 +69,6 @@
 		F80959D52B750A4700F8FDF7 /* SpeakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModel.swift; sourceTree = "<group>"; };
 		F80959D82B7519F600F8FDF7 /* SpeakersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersListView.swift; sourceTree = "<group>"; };
 		F80959DC2B75257F00F8FDF7 /* AudioStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamer.swift; sourceTree = "<group>"; };
-		F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + extensions.swift"; sourceTree = "<group>"; };
 		F80959E12B757E1100F8FDF7 /* String + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extensions.swift"; sourceTree = "<group>"; };
 		F80959E32B762FA700F8FDF7 /* SpeakerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerDetailView.swift; sourceTree = "<group>"; };
 		F80959E82B763B8100F8FDF7 /* SpeakerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerInfoView.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 		F80959DE2B7545D000F8FDF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F80959DF2B7545F800F8FDF7 /* Array + extensions.swift */,
 				F80959E12B757E1100F8FDF7 /* String + extensions.swift */,
 				F8DD65FD2B7A457600BAEBDB /* Locale + extensions.swift */,
 			);
@@ -357,7 +354,6 @@
 				F80959E92B763B8100F8FDF7 /* SpeakerInfoView.swift in Sources */,
 				F89D363A2C4A5A6E002FC7E4 /* StyledImageView.swift in Sources */,
 				F80959CA2B74FA1900F8FDF7 /* SpeakersDataSource.swift in Sources */,
-				F80959E02B7545F800F8FDF7 /* Array + extensions.swift in Sources */,
 				F80959D42B7504BD00F8FDF7 /* Speaker.swift in Sources */,
 				F80959D02B74FC3100F8FDF7 /* SpeakersListItemView.swift in Sources */,
 				F821FCC62C04E00B00C2360D /* GlobalConstants.swift in Sources */,

@@ -10,18 +10,16 @@ import SwiftUI
 @main
 struct LovoAISpeakersApp: App {
     @State private var imageCache = ImageCache()
-    
+    private var isNotTesting: Bool {
+        NSClassFromString("XCTestCase") == nil
+    }
+
     var body: some Scene {
         WindowGroup {
             if isNotTesting {
                 ContentView()
                     .environment(imageCache)
-                    .environment(SpeakersPageViewModel(speakersDataSource: SpeakersDataSource(),
-                                                       imageCache: imageCache))
             }
         }
-    }
-    private var isNotTesting: Bool {
-        NSClassFromString("XCTestCase") == nil
     }
 }

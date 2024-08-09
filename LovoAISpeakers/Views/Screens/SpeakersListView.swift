@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct SpeakersListView: View {
-    @Environment(ImageCache.self) private var imageCache
-    @Environment(SpeakersPageViewModel.self) private var viewModel
+    @State private var viewModel: SpeakersPageViewModel
+
+    init(imageCache: ImageCache) {
+        self.viewModel = .init(speakersDataSource: SpeakersDataSource(), imageCache: imageCache)
+    }
 
     var body: some View {
         NavigationStack {
@@ -58,7 +61,7 @@ struct SpeakersListView: View {
 }
 
 #Preview {
-    SpeakersListView()
+    SpeakersListView(imageCache: ImageCache())
 }
 
 
