@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(ImageCache.self) private var imageCache
     var body: some View {
-        SpeakersListView()
+        SpeakersListView(imageCache: imageCache)
     }
 }
 
